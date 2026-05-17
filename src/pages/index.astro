@@ -2,7 +2,7 @@
 import '../styles/global.css';
 const site = {
   title: 'Teoman Lam | Dataflows & Technical Delivery',
-  description: 'Technical delivery professional with strong experience in dataflows, ERP integration, and scalable process design, now applying those skills to tech, data center, and drone-focused roles.',
+  description: 'Technical delivery lead specializing in dataflows, data structure, and process scaling across the DACH region. Seeking business analyst and data analyst roles.',
   url: 'https://teolam.com',
 };
 ---
@@ -15,11 +15,9 @@ const site = {
     <meta name="description" content={site.description} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Teoman Lam" />
-    <meta name="keywords" content="Teoman Lam, dataflows, technical solutions, data structure, integration, process scaling, data center, drone, business analyst, data scientist, data analyst, technical product owner, project manager, data analytics specialist" />
+    <meta name="keywords" content="Teoman Lam, dataflows, data structure, technical leadership, process scaling, integration, DACH, Switzerland, business analyst, data analyst, technical product owner, project manager, data analytics specialist" />
     <link rel="canonical" href={site.url} />
-    <meta http-equiv="Cache-Control" content="public, max-age=604800" />
-    <meta http-equiv="Expires" content="Mon, 16 Jun 2026 00:00:00 GMT" />
-    <link rel="alternate" href={site.url} hreflang="en" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -28,9 +26,20 @@ const site = {
     <meta property="og:description" content={site.description} />
     <meta property="og:url" content={site.url} />
     <meta property="og:site_name" content="Teoman Lam" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={site.title} />
     <meta name="twitter:description" content={site.description} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Teoman Lam",
+      "url": "https://teolam.com",
+      "jobTitle": "Technical Delivery Lead",
+      "description": site.description,
+      "sameAs": [
+        "https://www.linkedin.com/in/teomanlam"
+      ]
+    })} />
   </head>
   <body>
     <div class="page">
