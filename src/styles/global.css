@@ -1,0 +1,472 @@
+﻿/*
+ *  ╔══════════════════════════════════════════════════════════════════════╗
+ *  ║                                                                      ║
+ *  ║            D E F I N I T E L Y   N O T   G O D Z I L L A             ║
+ *  ║                                                                      ║
+ *  ║               (   just a big lizard hanging around  )                ║
+ *  ║                                                                      ║
+ *  ╚══════════════════════════════════════════════════════════════════════╝
+ *
+ *                _,-}}-._
+ *               /\   }  /\
+ *             _|(O\\_ _/O)                  ___|_
+ *            _|/  (__''__)                 |#####|
+ *          _|\/    WVVVVW                  |#####|
+ *         \ _\     \MMMM/_             .-----.###|
+ *       _|\_\     _ '---; \_           |#####|###|
+ *  /\   \ _\/      \_   /   \          |#####|###|
+ * / (    _\/     \   \  |'VVV     P    |#####|###|
+ *(  '-,._\_.(      'VVV /      (_/|\_) |#####|###|
+ * \         /   _) /   _)     (_/_ _\_)|#####|###|
+ *  '....--''\__vvv)\__vvv)_____|_| |_|_|#####|###|____
+ * ------------------------------------------------
+ *
+ *              teolam.com — built with love and teeth
+ */
+
+:root {
+  color-scheme: light;
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  color: #000;
+  background: #fff;
+  accent-color: #0000ff;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding-top: 96px;
+  background: #fff;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+.page {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 24px;
+  background: #fff;
+  border-bottom: 1px solid #000;
+  z-index: 50;
+  flex-wrap: wrap;
+}
+
+nav .brand {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.36em;
+  color: #0000ff;
+}
+
+nav .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #00e;
+}
+
+.hero {
+  padding: 44px 36px;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 0;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #000;
+}
+
+.figures-short {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 24px 0 0;
+}
+
+.figure-card {
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 18px 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.figure-card strong {
+  font-size: 1.65rem;
+  line-height: 1.05;
+  color: #000;
+}
+
+.figure-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* TerminalValue-like tag row */
+.tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 8px 0 20px;
+}
+
+.tv-cat-pill {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  padding: 4px 8px;
+  font-size: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.tv-cat-pill:hover,
+.tv-cat-pill.active {
+  background: #000;
+  color: #fff;
+  cursor: default;
+}
+
+.tagline {
+  margin: 20px 0 18px;
+  max-width: 740px;
+  color: #222;
+}
+
+.hero,
+.section,
+.card,
+.figure-card {
+  opacity: 0;
+  animation: fadeInUp 0.45s ease forwards;
+}
+
+.hero {
+  animation-delay: 0.05s;
+}
+
+.figure-card {
+  animation-delay: 0.08s;
+}
+
+.card {
+  animation-delay: 0.12s;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #0000ff;
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+
+.badge::before {
+  content: ">";
+  color: #0000ff;
+}
+
+.section {
+  margin-top: 64px;
+  scroll-margin-top: 120px;
+  background: #fff;
+}
+
+#figures,
+.section {
+  scroll-margin-top: 120px;
+}
+
+.card {
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 28px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 22px;
+  height: 22px;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  opacity: 1;
+  pointer-events: none;
+}
+
+#education .card::before { background: #ff2448; }
+#experience .card::before { background: #0057ff; }
+#skills .card::before { background: #ff9f1c; }
+#certifications .card::before { background: #7f00ff; }
+#others .card::before { background: #0f9d58; }
+#freetime .card::before { background: #ff4438; }
+#languages .card::before { background: #3b28cc; }
+#contact .card::before { background: #ff7a18; }
+
+.section h2 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: #000;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.card p,
+.card li {
+  margin: 0;
+  color: #222;
+}
+
+.card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.card > p + ul,
+.card > strong + ul {
+  margin-top: 12px;
+}
+
+.card li + li {
+  margin-top: 8px;
+}
+
+a.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: #0000ff;
+  background: transparent;
+  border: 1px solid #0000ff;
+  padding: 12px 20px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.16s ease, color 0.16s ease;
+}
+
+a.cta:hover {
+  background: #0000ff;
+  color: #fff;
+  border-color: #0000ff;
+}
+
+footer {
+  margin-top: 84px;
+  padding-top: 24px;
+  border-top: 1px solid #000;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.footer-meta {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swiss-flag {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #d52b1e;
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(#ffffff, #ffffff);
+  background-size: 20% 58.33%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiss-flag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#ffffff, #ffffff) center/58.33% 20% no-repeat;
+}
+
+@media (min-width: 860px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 28px 16px 60px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .figures-short {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove border-radius on common interactive and section elements */
+button,
+input[type="button"],
+input[type="submit"],
+.tv-cat-pill,
+.badge,
+.hero,
+.card,
+.figure-card,
+nav,
+a.cta,
+a {
+  border-radius: 0 !important;
+}
+
+/* Add brackets and a 'new tab' arrow icon beside every link and button-like element */
+a,
+a.cta,
+.tv-cat-pill,
+.badge,
+button,
+input[type="button"],
+input[type="submit"] {
+  position: relative;
+}
+
+/* Default: add brackets + new-tab arrow for regular links and pills */
+a::before,
+.tv-cat-pill::before {
+  content: "[";
+  margin-right: 6px;
+  color: inherit;
+}
+
+a::after,
+.tv-cat-pill::after {
+  content: "]";
+  margin-left: 6px;
+  color: inherit;
+  font-size: 0.95em;
+}
+
+/* Exclude nav links from decorations */
+nav a::before,
+nav a::after {
+  content: none !important;
+}
+
+/* Remove brackets/icons from button elements and CTA links */
+a.cta::before,
+a.cta::after,
+button::before,
+button::after,
+input[type="button"]::before,
+input[type="button"]::after,
+input[type="submit"]::before,
+input[type="submit"]::after {
+  content: none !important;
+}
+
+/* PMI link: no underline and bracketed external arrow */
+.pmi-link {
+  text-decoration: none;
+}
+.pmi-link::before {
+  content: "[";
+  margin-right: 6px;
+  color: inherit;
+}
+.pmi-link::after {
+  content: "] ↗";
+  margin-left: 6px;
+  color: inherit;
+  font-size: 0.95em;
+}
