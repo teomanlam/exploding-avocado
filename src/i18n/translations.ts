@@ -1,4 +1,4 @@
-export type Lang = 'en' | 'de' | 'fr' | 'it' | 'ja' | 'ko';
+export type Lang = 'en' | 'de' | 'fr' | 'it' | 'ja' | 'ko' | 'tr';
 
 export const langMeta: Record<Lang, { label: string; path: string; flag: string }> = {
   en: { label: 'EN', path: '/',     flag: 'gb' },
@@ -7,6 +7,7 @@ export const langMeta: Record<Lang, { label: string; path: string; flag: string 
   it: { label: 'IT', path: '/it/', flag: 'it' },
   ja: { label: 'JA', path: '/ja/', flag: 'jp' },
   ko: { label: 'KO', path: '/ko/', flag: 'kr' },
+  tr: { label: 'TR', path: '/tr/', flag: 'tr' },
 };
 
 export interface Translation {
@@ -409,5 +410,69 @@ export const translations: Record<Lang, Translation> = {
     languages: { heading: '언어', items: ['독일어 — 모국어', '스위스 독일어 — 모국어', '영어 — 비즈니스 협상 수준', '터키어 — 일상 회화', '한국어 — 기초'] },
     contact: { heading: '연락처', strong: '언제든지 연락 주세요.', body: 'LinkedIn에서 정기적으로 활동하고 있습니다.', cta: 'LinkedIn 방문 ↗' },
     footer: { madeIn: '스위스에서 제작' },
+  },
+
+  tr: {
+    meta: {
+      title: 'Teoman Lam | Veri Akışları & Teknik Teslimat',
+      description: 'DACH bölgesinde veri akışları, veri yapısı ve süreç ölçeklendirme konusunda uzmanlaşmış teknik teslimat lideri. İş analisti ve veri analisti pozisyonları arıyor.',
+    },
+    nav: { education: 'Eğitim', experience: 'Deneyim', skills: 'Beceriler', certifications: 'Sertifikalar', others: 'Diğer', contact: 'İletişim' },
+    pills: ['Teknik Liderlik', 'Veri Akışları', 'Veri Yapısı', 'Entegrasyon', 'Ölçeklendirme'],
+    hero: {
+      badge: 'Teknik Liderlik · Veri Akışları · Veri Yapısı',
+      h1: 'Güçlü veri yapısı ve entegrasyon disipliniyle veri akışları oluşturmak ve ölçeklendirmek için teknik ekiplere liderlik etmek.',
+      tagline: [
+        'Ben Teo\'yum. Beş yıldır otomotiv, outdoor, perakende lojistik ve moda markalarında teknik projelere liderlik ediyorum. İş süreci optimizasyonuna geçiş yaptım ve ağırlıklı olarak DACH bölgesinde uluslararası ölçekte büyüyen süreçler oluşturdum.',
+        'Temel odak noktam, veri yapıları ve veri akışlarının otomasyonu ve optimizasyonudur.',
+      ],
+      cta: 'Bağlanalım',
+    },
+    figures: [
+      { value: '30%', label: 'Tamamen otomatik sipariş süreçleri (EDI) sayesinde B2B gelir artışı' },
+      { value: "2'500+", label: 'Entegre B2B katılım ve otomasyon çözümüyle desteklenen DACH perakende üyeleri' },
+      { value: '100%', label: 'Tam otomasyon sayesinde İsviçre B2C iade destek yükünde azalma' },
+      { value: '50–60%', label: 'Etkili ekip liderliği sayesinde geliştirme ekiplerinde ortalama genel gider azalması' },
+    ],
+    education: {
+      heading: 'Eğitim',
+      items: [
+        { school: 'ZHAW Winterthur, İşletme ve Hukuk Fakültesi', period: 'Eylül 2025 – Devam Ediyor · Bilim Lisansı (BSc), İşletme Bilişim Teknolojisi', grade: 'Mevcut Not: 5.25 / 6.0' },
+        { school: 'Informatikmittelschule IMS-T (Yazılım Geliştirme), BWZ Rapperswil-Jona', period: 'Ağustos 2017 – Temmuz 2021 · Federal Mesleki Bakalorya (FVB) teknik', grade: 'Not: 5.0 / 6.0' },
+      ],
+    },
+    experience: {
+      heading: 'Deneyim',
+      items: [
+        { role: 'Ürün Sahibi ERP & Lojistik', company: 'BLACKROLL AG', period: 'Ocak 2025 – Devam Ediyor · Uzaktan', bullets: ['Almanya ve Avusturya\'daki 2.500+ lokasyon için EDI tedarik otomasyonu ve B2B rollout\'una liderlik etti.', 'Ölçeklenebilir entegrasyon ve süreç iyileştirmeleriyle %30 gelir artışı sağladı.', 'Tüm boyutlarda iade işlemlerini otomatikleştirerek manuel müşteri hizmetleri yükünü ortadan kaldırdı.', 'Devir sürtünmesini azaltmak için entegrasyon dokümantasyonu, sürüm trenleri ve ekip süreçleri oluşturdu.'] },
+        { role: 'BT Proje Müdürü', company: 'FIREGROUP', period: 'Mayıs 2022 – Haziran 2024 · Hibrit', bullets: ['Otomotiv, outdoor ve mobilya müşterileri için dijital yeniden lansmanlar ve ürün yapılandırıcılar teslim etti.', '5 uzmandan oluşan ekipleri ve altı haneli bütçeleri yönetti.', 'Müşteriye yönelik iş akışları, entegrasyon kalitesi ve proje kârlılığına odaklandı.'] },
+        { role: 'Proje Müdürü', company: 'Onebyte AG', period: 'Ağustos 2021 – Mayıs 2022 · Yerinde', bullets: ['Beş haneli bütçeli web projeleri için uçtan uca teslimat yaptı.', 'Büyük bir İsviçre spor salonu zinciri için yerelleştirilmiş i18n çözümleri teslim etti.', 'Frontend, full stack ve backend ekiplerindeki geliştiricileri koordine etti.'] },
+        { role: 'Junior Proje Müdürü & Web Geliştirici', company: 'Netmaster (Schweiz) AG', period: 'Ağustos 2020 – Temmuz 2021 · Yerinde', bullets: ['Web projesi operasyonlarını, barındırma kararlılığını ve müşteri teknik desteğini destekledi.', 'Birden fazla müşteri ortamında çalışma süresi ve performansı sürdürdü.'] },
+      ],
+    },
+    skills: {
+      heading: 'Beceriler',
+      items: [
+        { title: 'Teknik Liderlik', bullets: ['Teslimat ve entegrasyon süreçlerinde teknik ekiplere liderlik etmek', 'Paydaşları, mühendisleri ve iş hedeflerini uyumlu hale getirmek', 'Net teknik sahiplikle uygulamayı yönlendirmek', 'Tekrarlanabilir teslimat için ekip süreçleri oluşturmak'] },
+        { title: 'Veri Akışları & Yapısı', bullets: ['Sistemler arasında veri akışları tasarlamak ve ölçeklendirmek', 'Tutarlılık ve entegrasyon için veri yapılandırmak', 'Teknik veri süreci iş akışları tanımlamak', 'Temiz mimariyle veri odaklı operasyonları desteklemek'] },
+        { title: 'Entegrasyon & Ölçeklendirme', bullets: ['ERP, API ve ara katman yazılımı üzerinden sistem entegrasyonu', 'Süreç ölçeklendirme ve sürüm treni tanımı', 'Operasyonel devir ve dokümantasyon sistemleri', 'Teknik iş akışlarında kalite ve hata azaltımı'] },
+        { title: 'Süreç & Teslimat', bullets: ['Ölçeklenebilir süreç tanımı', 'Teknik dokümantasyon ve bilgi tabanı tasarımı', 'Tekrarlanabilir teslimat için standardizasyon', 'Müşteriye yönelik süreç optimizasyonu'] },
+      ],
+    },
+    certifications: {
+      heading: 'Sertifikalar',
+      items: [{ title: 'PMP — Proje Yönetimi Profesyoneli (13 Nisan 2026)', body: 'Yapılandırılmış proje liderliği ve büyük ölçekli teslimat alanında sertifikalı.' }],
+    },
+    others: {
+      heading: 'Odak & İlgi Alanları',
+      items: [
+        { title: 'Kariyer Odağı', bullets: ['Yapay Zeka ve Veri — Claude projeleri ve ajan yönlendirme', 'Veri akışları, veri yapısı ve entegrasyon ölçeklendirme', 'Teknik teslimat ve sistem entegrasyonu', 'İş analizi ve veri-teknik iş birliği'] },
+        { title: 'Aranan Pozisyonlar', bullets: ['İş analisti', 'Veri analisti', 'Teknik ürün sahibi', 'Proje müdürü', 'Veri analitiği uzmanı'] },
+      ],
+    },
+    freetime: { heading: 'Boş Zaman', items: ['Fitness', 'Brezilya Jiu Jitsu', 'Kodlama'] },
+    languages: { heading: 'Diller', items: ['Almanca — Anadil', 'İsviçre Almancası — Anadil', 'İngilizce — Müzakere düzeyi', 'Türkçe — Anadil', 'Korece — Temel'] },
+    contact: { heading: 'İletişim', strong: 'Her zaman sohbet etmekten mutluluk duyarım.', body: 'LinkedIn\'de düzenli olarak aktifim.', cta: 'LinkedIn\'i Ziyaret Et ↗' },
+    footer: { madeIn: 'İsviçre\'de Yapıldı' },
   },
 };
