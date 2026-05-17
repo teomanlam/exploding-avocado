@@ -1,12 +1,12 @@
 export type Lang = 'en' | 'de' | 'fr' | 'it' | 'ja' | 'ko';
 
-export const langMeta: Record<Lang, { label: string; path: string }> = {
-  en: { label: 'EN', path: '/' },
-  de: { label: 'DE', path: '/de/' },
-  fr: { label: 'FR', path: '/fr/' },
-  it: { label: 'IT', path: '/it/' },
-  ja: { label: 'JA', path: '/ja/' },
-  ko: { label: 'KO', path: '/ko/' },
+export const langMeta: Record<Lang, { label: string; path: string; flag: string }> = {
+  en: { label: 'EN', path: '/',     flag: 'gb' },
+  de: { label: 'DE', path: '/de/', flag: 'de' },
+  fr: { label: 'FR', path: '/fr/', flag: 'fr' },
+  it: { label: 'IT', path: '/it/', flag: 'it' },
+  ja: { label: 'JA', path: '/ja/', flag: 'jp' },
+  ko: { label: 'KO', path: '/ko/', flag: 'kr' },
 };
 
 export interface Translation {

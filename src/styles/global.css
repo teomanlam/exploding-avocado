@@ -328,7 +328,17 @@ a.cta:hover {
   align-items: center;
 }
 
+.lang-btn .fi {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
 .lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 0.72rem;
   font-weight: 600;
   color: #999;

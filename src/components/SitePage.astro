@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import 'flag-icons/css/flag-icons.min.css';
 import { type Lang, type Translation, langMeta } from '../i18n/translations';
 
 interface Props {
@@ -87,7 +88,10 @@ const jsonLd = {
         </div>
         <div class="lang-switcher">
           {Object.entries(langMeta).map(([code, meta]) => (
-            <a href={meta.path} class:list={['lang-btn', { active: code === lang }]}>{meta.label}</a>
+            <a href={meta.path} class:list={['lang-btn', { active: code === lang }]}>
+              <span class={`fi fi-${meta.flag} fis`}></span>
+              {meta.label}
+            </a>
           ))}
         </div>
       </nav>
