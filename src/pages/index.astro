@@ -11,6 +11,8 @@ const site = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none';" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>{site.title}</title>
     <meta name="description" content={site.description} />
     <meta name="robots" content="index, follow" />
@@ -18,6 +20,8 @@ const site = {
     <meta name="keywords" content="Teoman Lam, dataflows, data structure, technical leadership, process scaling, integration, DACH, Switzerland, business analyst, data analyst, technical product owner, project manager, data analytics specialist" />
     <link rel="canonical" href={site.url} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -34,11 +38,26 @@ const site = {
       "@type": "Person",
       "name": "Teoman Lam",
       "url": "https://teolam.com",
-      "jobTitle": "Technical Delivery Lead",
+      "jobTitle": "IT Project Manager",
       "description": site.description,
       "sameAs": [
         "https://www.linkedin.com/in/teomanlam"
-      ]
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "ZHAW Zurich University of Applied Sciences",
+        "url": "https://www.zhaw.ch"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Project Management Professional (PMP)",
+        "credentialCategory": "Certification",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Project Management Institute (PMI)",
+          "url": "https://www.pmi.org"
+        }
+      }
     })} />
   </head>
   <body>
