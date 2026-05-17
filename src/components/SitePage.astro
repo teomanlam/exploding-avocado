@@ -78,22 +78,25 @@ const jsonLd = {
   <body>
     <div class="page">
       <nav>
-        <div class="brand">Teoman Lam</div>
-        <div class="links">
-          <a href="#education">{t.nav.education}</a>
-          <a href="#experience">{t.nav.experience}</a>
-          <a href="#skills">{t.nav.skills}</a>
-          <a href="#certifications">{t.nav.certifications}</a>
-          <a href="#others">{t.nav.others}</a>
-          <a href="#contact">{t.nav.contact}</a>
+        <div class="nav-lang">
+          <div class="lang-switcher">
+            {Object.entries(langMeta).map(([code, meta]) => (
+              <a href={meta.path} class:list={['lang-btn', { active: code === lang }]}>
+                <span class={`fi fi-${meta.flag} fis`}></span>
+              </a>
+            ))}
+          </div>
         </div>
-        <div class="lang-switcher">
-          {Object.entries(langMeta).map(([code, meta]) => (
-            <a href={meta.path} class:list={['lang-btn', { active: code === lang }]}>
-              <span class={`fi fi-${meta.flag} fis`}></span>
-              {meta.label}
-            </a>
-          ))}
+        <div class="nav-main">
+          <div class="brand">Teoman Lam</div>
+          <div class="links">
+            <a href="#education">{t.nav.education}</a>
+            <a href="#experience">{t.nav.experience}</a>
+            <a href="#skills">{t.nav.skills}</a>
+            <a href="#certifications">{t.nav.certifications}</a>
+            <a href="#others">{t.nav.others}</a>
+            <a href="#contact">{t.nav.contact}</a>
+          </div>
         </div>
       </nav>
 

@@ -40,13 +40,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+  scroll-padding-top: 140px;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  padding-top: 96px;
+  padding-top: 118px;
   background: #fff;
   color: #000;
   -webkit-font-smoothing: antialiased;
@@ -69,13 +69,26 @@ nav {
   position: fixed;
   inset: 0 0 auto 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 18px 24px;
+  flex-direction: column;
+  padding: 0 24px;
   background: #fff;
   border-bottom: 1px solid #000;
   z-index: 50;
+}
+
+.nav-lang {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
   flex-wrap: wrap;
 }
 
@@ -219,13 +232,13 @@ nav a:focus-visible {
 
 .section {
   margin-top: 64px;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 140px;
   background: #fff;
 }
 
 #figures,
 .section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 140px;
 }
 
 .card {
@@ -329,8 +342,8 @@ a.cta:hover {
 }
 
 .lang-btn .fi {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -411,7 +424,7 @@ footer {
     padding: 28px 16px 60px;
   }
 
-  nav {
+  .nav-main {
     justify-content: center;
   }
 
