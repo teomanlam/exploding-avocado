@@ -1,0 +1,221 @@
+---
+import '../styles/global.css';
+import { type Lang, type Translation, langMeta } from '../i18n/translations';
+
+interface Props {
+  t: Translation;
+  lang: Lang;
+}
+
+const { t, lang } = Astro.props;
+const siteUrl = 'https://teolam.com';
+const canonicalUrl = `${siteUrl}${langMeta[lang].path}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Teoman Lam',
+  url: siteUrl,
+  jobTitle: 'IT Project Manager',
+  description: t.meta.description,
+  sameAs: ['https://www.linkedin.com/in/teomanlam'],
+  alumniOf: {
+    '@type': 'EducationalOrganization',
+    name: 'ZHAW Zurich University of Applied Sciences',
+    url: 'https://www.zhaw.ch',
+  },
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Project Management Professional (PMP)',
+    credentialCategory: 'Certification',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'Project Management Institute (PMI)',
+      url: 'https://www.pmi.org',
+    },
+  },
+};
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none';" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Teoman Lam" />
+    <meta name="keywords" content="Teoman Lam, dataflows, data structure, technical leadership, process scaling, integration, DACH, Switzerland, business analyst, data analyst, technical product owner, project manager, data analytics specialist" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
+    <link rel="alternate" hreflang="de" href={`${siteUrl}/de/`} />
+    <link rel="alternate" hreflang="fr" href={`${siteUrl}/fr/`} />
+    <link rel="alternate" hreflang="it" href={`${siteUrl}/it/`} />
+    <link rel="alternate" hreflang="ja" href={`${siteUrl}/ja/`} />
+    <link rel="alternate" hreflang="ko" href={`${siteUrl}/ko/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Teoman Lam" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <div class="page">
+      <nav>
+        <div class="brand">Teoman Lam</div>
+        <div class="links">
+          <a href="#education">{t.nav.education}</a>
+          <a href="#experience">{t.nav.experience}</a>
+          <a href="#skills">{t.nav.skills}</a>
+          <a href="#certifications">{t.nav.certifications}</a>
+          <a href="#others">{t.nav.others}</a>
+          <a href="#contact">{t.nav.contact}</a>
+        </div>
+        <div class="lang-switcher">
+          {Object.entries(langMeta).map(([code, meta]) => (
+            <a href={meta.path} class:list={['lang-btn', { active: code === lang }]}>{meta.label}</a>
+          ))}
+        </div>
+      </nav>
+
+      <div class="tag-row">
+        {t.pills.map(pill => <a class="tv-cat-pill" href="#skills">{pill}</a>)}
+      </div>
+
+      <section class="hero">
+        <div class="badge">{t.hero.badge}</div>
+        <h1>{t.hero.h1}</h1>
+        {t.hero.tagline.map(para => <p class="tagline">{para}</p>)}
+        <a class="cta" href="#contact">{t.hero.cta}</a>
+      </section>
+
+      <section id="figures" class="figures-short">
+        {t.figures.map(fig => (
+          <div class="figure-card">
+            <strong>{fig.value}</strong>
+            <p>{fig.label}</p>
+          </div>
+        ))}
+      </section>
+
+      <section id="education" class="section">
+        <h2>{t.education.heading}</h2>
+        <div class="cards">
+          {t.education.items.map(item => (
+            <div class="card">
+              <strong>{item.school}</strong>
+              <p>{item.period}</p>
+              <p>{item.grade}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <h2>{t.experience.heading}</h2>
+        <div class="cards">
+          {t.experience.items.map(item => (
+            <div class="card">
+              <strong>{item.role}</strong>
+              <p><em>{item.company}</em></p>
+              <p>{item.period}</p>
+              <ul>
+                {item.bullets.map(b => <li>{b}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>{t.skills.heading}</h2>
+        <div class="cards grid grid-2">
+          {t.skills.items.map(item => (
+            <div class="card">
+              <strong>{item.title}</strong>
+              <ul>
+                {item.bullets.map(b => <li>{b}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <h2>{t.certifications.heading}</h2>
+        <div class="cards">
+          {t.certifications.items.map(item => (
+            <div class="card">
+              <strong>{item.title}</strong>
+              <p>{item.body} <a class="pmi-link" href="https://www.pmi.org/" target="_blank" rel="noopener">PMI</a></p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="others" class="section">
+        <h2>{t.others.heading}</h2>
+        <div class="cards grid grid-2">
+          {t.others.items.map(item => (
+            <div class="card">
+              <strong>{item.title}</strong>
+              <ul>
+                {item.bullets.map(b => <li>{b}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="freetime" class="section">
+        <h2>{t.freetime.heading}</h2>
+        <div class="card">
+          <ul>
+            {t.freetime.items.map(item => <li>{item}</li>)}
+          </ul>
+        </div>
+      </section>
+
+      <section id="languages" class="section">
+        <h2>{t.languages.heading}</h2>
+        <div class="card">
+          <ul>
+            {t.languages.items.map(item => <li>{item}</li>)}
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>{t.contact.heading}</h2>
+        <div class="card">
+          <strong>{t.contact.strong}</strong>
+          <p>{t.contact.body}</p>
+          <a class="cta" href="https://www.linkedin.com/in/teomanlam?originalSubdomain=ch" target="_blank" rel="noopener">{t.contact.cta}</a>
+        </div>
+      </section>
+
+      <footer>
+        <p>© {new Date().getFullYear()} Teoman Lam — teolam.com</p>
+        <p class="footer-meta">
+          <span class="version">v1.1.0</span>
+          <span class="divider">·</span>
+          <span class="made-in">{t.footer.madeIn} <span class="swiss-flag" aria-label="Swiss flag" role="img"></span></span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

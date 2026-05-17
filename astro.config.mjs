@@ -5,4 +5,11 @@ export default defineConfig({
   site: 'https://teolam.com',
   output: 'static',
   integrations: [sitemap()],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'de', 'fr', 'it', 'ja', 'ko'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });
