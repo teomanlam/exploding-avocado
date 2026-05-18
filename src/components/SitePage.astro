@@ -116,7 +116,7 @@ const jsonLd = {
         <div class="nav-lang">
           <div class="lang-switcher">
             {Object.entries(langMeta).map(([code, meta]) => (
-              <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name}>
+              <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name} title={meta.name}>
                 <span class={`fi fi-${meta.flag} fis`}></span>
               </a>
             ))}
@@ -125,25 +125,25 @@ const jsonLd = {
         <div class="nav-main">
           <div class="brand">Teoman Lam</div>
           <div class="links">
-            <a href="#education">{t.nav.education}</a>
-            <a href="#experience">{t.nav.experience}</a>
-            <a href="#skills">{t.nav.skills}</a>
-            <a href="#certifications">{t.nav.certifications}</a>
-            <a href="#others">{t.nav.others}</a>
-            <a href="#contact">{t.nav.contact}</a>
+            <a href="#education" title={t.nav.education}>{t.nav.education}</a>
+            <a href="#experience" title={t.nav.experience}>{t.nav.experience}</a>
+            <a href="#skills" title={t.nav.skills}>{t.nav.skills}</a>
+            <a href="#certifications" title={t.nav.certifications}>{t.nav.certifications}</a>
+            <a href="#others" title={t.nav.others}>{t.nav.others}</a>
+            <a href="#contact" title={t.nav.contact}>{t.nav.contact}</a>
           </div>
         </div>
       </nav>
 
       <div class="tag-row">
-        {t.pills.map(pill => <a class="tv-cat-pill" href="#skills">{pill}</a>)}
+        {t.pills.map(pill => <a class="tv-cat-pill" href="#skills" title={pill}>{pill}</a>)}
       </div>
 
       <section class="hero">
         <div class="badge">{t.hero.badge}</div>
         <h1>{t.hero.h1}</h1>
         {t.hero.tagline.map(para => <p class="tagline">{para}</p>)}
-        <a class="cta" href="#contact">{t.hero.cta}</a>
+        <a class="cta" href="#contact" title={t.hero.cta}>{t.hero.cta}</a>
       </section>
 
       <section id="figures" class="figures-short">
@@ -204,7 +204,7 @@ const jsonLd = {
           {t.certifications.items.map(item => (
             <div class="card">
               <strong>{item.title}</strong>
-              <p>{item.body} <a class="pmi-link" href="https://www.pmi.org/" target="_blank" rel="noopener">PMI</a></p>
+              <p>{item.body} <a class="pmi-link" href="https://www.pmi.org/" target="_blank" rel="noopener" title="Project Management Institute">PMI</a></p>
             </div>
           ))}
         </div>
@@ -247,7 +247,7 @@ const jsonLd = {
         <div class="card">
           <strong>{t.contact.strong}</strong>
           <p>{t.contact.body}</p>
-          <a class="cta" href="https://www.linkedin.com/in/teomanlam?originalSubdomain=ch" target="_blank" rel="noopener">{t.contact.cta}</a>
+          <a class="cta" href="https://www.linkedin.com/in/teomanlam?originalSubdomain=ch" target="_blank" rel="noopener" title={t.contact.cta}>{t.contact.cta}</a>
         </div>
       </section>
 
