@@ -31,7 +31,7 @@ export const translations: Record<Lang, Translation> = {
   en: {
     meta: {
       title: 'Teoman Lam | Dataflows & Technical Delivery',
-      description: 'IT Project Manager and technical delivery lead based in the DACH region. Specializing in dataflows, data structure, and process scaling.',
+      description: 'IT Project Manager and technical delivery lead based in the DACH region. Specializing in dataflows, data structure, process scaling, and end-to-end B2B automation.',
     },
     nav: { education: 'Education', experience: 'Experience', skills: 'Skills', certifications: 'Certifications', others: 'Others', contact: 'Contact' },
     pills: ['Technical Leadership', 'Dataflows', 'Data Structure', 'Integration', 'Scaling'],
@@ -95,7 +95,7 @@ export const translations: Record<Lang, Translation> = {
   de: {
     meta: {
       title: 'Teoman Lam | Datenflüsse & Technische Lieferung',
-      description: 'IT-Projektmanager und technischer Lieferleiter im DACH-Raum. Spezialisiert auf Datenflüsse, Datenstruktur und Prozessskalierung.',
+      description: 'IT-Projektmanager und technischer Lieferleiter im DACH-Raum. Spezialisiert auf Datenflüsse, Datenstruktur, Prozessskalierung und End-to-End-B2B-Automatisierung.',
     },
     nav: { education: 'Ausbildung', experience: 'Erfahrung', skills: 'Fähigkeiten', certifications: 'Zertifizierungen', others: 'Weiteres', contact: 'Kontakt' },
     pills: ['Technische Führung', 'Datenflüsse', 'Datenstruktur', 'Integration', 'Skalierung'],
@@ -159,7 +159,7 @@ export const translations: Record<Lang, Translation> = {
   fr: {
     meta: {
       title: 'Teoman Lam | Flux de données & Livraison technique',
-      description: "Chef de projet IT et responsable de livraison technique dans la région DACH. Spécialisé dans les flux de données, la structure des données et la mise à l'échelle.",
+      description: "Chef de projet IT et responsable de livraison technique dans la région DACH. Spécialisé dans les flux de données, la structure des données, la mise à l'échelle et l'automatisation B2B.",
     },
     nav: { education: 'Formation', experience: 'Expérience', skills: 'Compétences', certifications: 'Certifications', others: 'Autres', contact: 'Contact' },
     pills: ['Leadership technique', 'Flux de données', 'Structure des données', 'Intégration', 'Mise à l\'échelle'],
@@ -223,7 +223,7 @@ export const translations: Record<Lang, Translation> = {
   it: {
     meta: {
       title: 'Teoman Lam | Flussi di dati & Consegna tecnica',
-      description: 'Project Manager IT e responsabile di consegna tecnica nella regione DACH. Specializzato in flussi di dati, struttura dei dati e scalabilità dei processi.',
+      description: 'Project Manager IT e responsabile di consegna tecnica nella regione DACH. Specializzato in flussi di dati, struttura dei dati, scalabilità dei processi e automazione B2B.',
     },
     nav: { education: 'Formazione', experience: 'Esperienza', skills: 'Competenze', certifications: 'Certificazioni', others: 'Altro', contact: 'Contatto' },
     pills: ['Leadership tecnica', 'Flussi di dati', 'Struttura dei dati', 'Integrazione', 'Scalabilità'],
@@ -287,7 +287,7 @@ export const translations: Record<Lang, Translation> = {
   ja: {
     meta: {
       title: 'テオマン・ラム | データフロー & テクニカルデリバリー',
-      description: 'DACHリージョンを拠点とするITプロジェクトマネージャー・テクニカルデリバリーリード。データフロー、データ構造、プロセスのスケーリングを専門とする。',
+      description: 'DACHリージョンを拠点とするITプロジェクトマネージャー・テクニカルデリバリーリード。データフロー、データ構造、プロセスのスケーリング、エンドツーエンドのB2B自動化を専門とする。',
     },
     nav: { education: '学歴', experience: '職歴', skills: 'スキル', certifications: '資格', others: 'その他', contact: 'お問い合わせ' },
     pills: ['テクニカルリーダーシップ', 'データフロー', 'データ構造', 'インテグレーション', 'スケーリング'],
@@ -351,7 +351,7 @@ export const translations: Record<Lang, Translation> = {
   ko: {
     meta: {
       title: '테오만 람 | 데이터플로우 & 기술 납품',
-      description: 'DACH 지역을 기반으로 하는 IT 프로젝트 매니저 겸 기술 납품 리드. 데이터플로우, 데이터 구조 및 프로세스 확장 전문.',
+      description: 'DACH 지역을 기반으로 하는 IT 프로젝트 매니저 겸 기술 납품 리드. 데이터플로우, 데이터 구조, 프로세스 확장 및 엔드투엔드 B2B 자동화 전문.',
     },
     nav: { education: '학력', experience: '경력', skills: '스킬', certifications: '자격증', others: '기타', contact: '연락처' },
     pills: ['기술 리더십', '데이터플로우', '데이터 구조', '통합', '확장'],
@@ -415,7 +415,7 @@ export const translations: Record<Lang, Translation> = {
   tr: {
     meta: {
       title: 'Teoman Lam | Veri Akışları & Teknik Teslimat',
-      description: 'DACH bölgesinde faaliyet gösteren IT Proje Yöneticisi ve teknik teslimat lideri. Veri akışları, veri yapısı ve süreç ölçeklendirme konusunda uzmanlaşmış.',
+      description: 'DACH bölgesinde faaliyet gösteren IT Proje Yöneticisi ve teknik teslimat lideri. Veri akışları, veri yapısı, süreç ölçeklendirme ve uçtan uca B2B otomasyonu konusunda uzmanlaşmış.',
     },
     nav: { education: 'Eğitim', experience: 'Deneyim', skills: 'Beceriler', certifications: 'Sertifikalar', others: 'Diğer', contact: 'İletişim' },
     pills: ['Teknik Liderlik', 'Veri Akışları', 'Veri Yapısı', 'Entegrasyon', 'Ölçeklendirme'],
