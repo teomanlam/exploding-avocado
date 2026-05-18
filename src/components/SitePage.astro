@@ -116,7 +116,7 @@ const jsonLd = {
         <div class="nav-lang">
           <div class="lang-switcher">
             {Object.entries(langMeta).map(([code, meta]) => (
-              <a href={meta.path} class:list={['lang-btn', { active: code === lang }]}>
+              <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name}>
                 <span class={`fi fi-${meta.flag} fis`}></span>
               </a>
             ))}
