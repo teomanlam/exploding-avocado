@@ -384,6 +384,10 @@ footer {
   color: #222;
 }
 
+.footer-lang {
+  display: none;
+}
+
 .footer-meta {
   margin-top: 6px;
   font-size: 0.78rem;
@@ -425,8 +429,20 @@ footer {
 }
 
 @media (max-width: 720px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    padding-top: 66px;
+  }
+
   .page {
     padding: 28px 16px 60px;
+  }
+
+  .nav-lang {
+    display: none;
   }
 
   .nav-main {
@@ -435,6 +451,18 @@ footer {
 
   .figures-short {
     grid-template-columns: 1fr;
+  }
+
+  .section,
+  #figures {
+    scroll-margin-top: 80px;
+  }
+
+  .footer-lang {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 16px;
   }
 }
 
@@ -491,9 +519,11 @@ a::after,
   font-size: 0.95em;
 }
 
-/* Exclude nav links from decorations */
+/* Exclude nav links and lang buttons from decorations */
 nav a::before,
-nav a::after {
+nav a::after,
+.lang-btn::before,
+.lang-btn::after {
   content: none !important;
 }
 

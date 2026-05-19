@@ -258,6 +258,13 @@ const jsonLd = {
           <span class="divider">·</span>
           <span class="made-in">{t.footer.madeIn} <span class="swiss-flag" aria-label="Swiss flag" role="img"></span></span>
         </p>
+        <div class="footer-lang">
+          {Object.entries(langMeta).map(([code, meta]) => (
+            <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name} title={meta.name}>
+              <span class={`fi fi-${meta.flag} fis`}></span>
+            </a>
+          ))}
+        </div>
       </footer>
     </div>
   </body>
