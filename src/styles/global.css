@@ -458,6 +458,14 @@ footer {
     scroll-margin-top: 80px;
   }
 
+  footer {
+    text-align: center;
+  }
+
+  .footer-meta {
+    justify-content: center;
+  }
+
   .footer-lang {
     display: flex;
     justify-content: center;
