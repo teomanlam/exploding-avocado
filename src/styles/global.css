@@ -122,6 +122,11 @@ nav a:focus-visible {
   color: #00e;
 }
 
+nav a[href="#contact"] {
+  color: #0000ff;
+  font-weight: 700;
+}
+
 .hero {
   padding: 44px 36px;
   border: 1px solid #000;
