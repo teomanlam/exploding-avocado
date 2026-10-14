@@ -41,7 +41,7 @@ export const translations: Record<Lang, Translation> = {
       badge: 'Technical Product Owner · Zurich · PMP',
       h1: 'I turn complex dataflows into systems that scale.',
       tagline: [
-        'I\'m Teo. For five years I\'ve led technical projects for automotive, outdoor, retail-logistics and fashion brands – currently as Technical Product Owner and ERP Operations & Systems Owner at BLACKROLL.',
+        'I\'m Teo. For five years I\'ve led technical projects for automotive, outdoor, retail-logistics and fashion brands – currently as Technical Product Owner: ERP Operations & Systems at BLACKROLL.',
         'My work sits where business processes meet data: I automate what slows teams down, structure data so systems can talk to each other, and build processes that scale across DACH.',
       ],
       cta: 'Get in touch',
@@ -62,7 +62,7 @@ export const translations: Record<Lang, Translation> = {
     experience: {
       heading: 'Experience',
       items: [
-        { role: 'Technical Product Owner: ERP Operations & Systems Owner', company: 'BLACKROLL AG', period: 'January 2025 – Present · Remote', bullets: ['Rolled out EDI ordering and B2B automation to 2,500+ retail locations in Germany and Austria.', 'Grew B2B revenue by 30% through scalable integrations and leaner processes.', 'Fully automated returns handling – manual customer-service effort dropped to zero.', 'Introduced integration docs, release trains and team processes that cut handoff friction.'] },
+        { role: 'Technical Product Owner: ERP Operations & Systems', company: 'BLACKROLL AG', period: 'January 2025 – Present · Remote', bullets: ['Rolled out EDI ordering and B2B automation to 2,500+ retail locations in Germany and Austria.', 'Grew B2B revenue by 30% through scalable integrations and leaner processes.', 'Fully automated returns handling – manual customer-service effort dropped to zero.', 'Introduced integration docs, release trains and team processes that cut handoff friction.'] },
         { role: 'IT Project Manager', company: 'FIREGROUP', period: 'May 2022 – June 2024 · Hybrid', bullets: ['Delivered digital relaunches and product configurators for automotive, outdoor and furniture brands.', 'Led teams of five specialists with budgets up to six figures.', 'Kept the focus on customer workflows, integration quality and project profitability.'] },
         { role: 'Project Manager', company: 'Onebyte AG', period: 'August 2021 – May 2022 · On-site', bullets: ['Owned end-to-end delivery of web projects with budgets up to five figures.', 'Delivered multilingual (i18n) solutions for a major Swiss gym chain.', 'Coordinated frontend, full-stack and backend developers.'] },
         { role: 'Junior Project Manager & Web Developer', company: 'Netmaster (Schweiz) AG', period: 'August 2020 – July 2021 · On-site', bullets: ['Supported web operations, hosting and technical client support.', 'Kept multiple customer environments online and fast.'] },
@@ -106,7 +106,7 @@ export const translations: Record<Lang, Translation> = {
       badge: 'Technical Product Owner · Zürich · PMP',
       h1: 'Ich mache aus komplexen Datenflüssen Systeme, die skalieren.',
       tagline: [
-        'Ich bin Teo. Seit fünf Jahren leite ich technische Projekte für Marken aus Automotive, Outdoor, Retail-Logistik und Mode – aktuell als Technical Product Owner und ERP Operations & Systems Owner bei BLACKROLL.',
+        'Ich bin Teo. Seit fünf Jahren leite ich technische Projekte für Marken aus Automotive, Outdoor, Retail-Logistik und Mode – aktuell als Technical Product Owner: ERP Operations & Systems bei BLACKROLL.',
         'Meine Arbeit liegt dort, wo Geschäftsprozesse auf Daten treffen: Ich automatisiere, was Teams bremst, strukturiere Daten so, dass Systeme miteinander sprechen, und baue Prozesse, die im DACH-Raum skalieren.',
       ],
       cta: 'Kontakt aufnehmen',
@@ -127,7 +127,7 @@ export const translations: Record<Lang, Translation> = {
     experience: {
       heading: 'Berufserfahrung',
       items: [
-        { role: 'Technical Product Owner: ERP Operations & Systems Owner', company: 'BLACKROLL AG', period: 'Januar 2025 – Heute · Remote', bullets: ['EDI-Bestellprozesse und B2B-Automatisierung für 2\'500+ Handelsstandorte in Deutschland und Österreich eingeführt.', 'B2B-Umsatz um 30 % gesteigert – durch skalierbare Integrationen und schlankere Prozesse.', 'Retourenabwicklung vollständig automatisiert – manueller Kundenservice-Aufwand: null.', 'Integrationsdokumentation, Release-Trains und Teamprozesse eingeführt, die Übergaben reibungslos machen.'] },
+        { role: 'Technical Product Owner: ERP Operations & Systems', company: 'BLACKROLL AG', period: 'Januar 2025 – Heute · Remote', bullets: ['EDI-Bestellprozesse und B2B-Automatisierung für 2\'500+ Handelsstandorte in Deutschland und Österreich eingeführt.', 'B2B-Umsatz um 30 % gesteigert – durch skalierbare Integrationen und schlankere Prozesse.', 'Retourenabwicklung vollständig automatisiert – manueller Kundenservice-Aufwand: null.', 'Integrationsdokumentation, Release-Trains und Teamprozesse eingeführt, die Übergaben reibungslos machen.'] },
         { role: 'IT-Projektleiter', company: 'FIREGROUP', period: 'Mai 2022 – Juni 2024 · Hybrid', bullets: ['Digitale Relaunches und Produktkonfiguratoren für Marken aus Automotive, Outdoor und Möbel umgesetzt.', 'Teams mit fünf Spezialisten und Budgets im sechsstelligen Bereich geführt.', 'Fokus auf Kunden-Workflows, Integrationsqualität und Projektrentabilität.'] },
         { role: 'Projektleiter', company: 'Onebyte AG', period: 'August 2021 – Mai 2022 · Vor Ort', bullets: ['Webprojekte mit Budgets bis in den fünfstelligen Bereich von A bis Z verantwortet.', 'Mehrsprachige (i18n) Lösungen für eine grosse Schweizer Fitnesskette umgesetzt.', 'Frontend-, Full-Stack- und Backend-Entwickler koordiniert.'] },
         { role: 'Junior-Projektleiter & Webentwickler', company: 'Netmaster (Schweiz) AG', period: 'August 2020 – Juli 2021 · Vor Ort', bullets: ['Webprojekt-Betrieb, Hosting und technischen Kundensupport unterstützt.', 'Mehrere Kundenumgebungen stabil und performant gehalten.'] },
@@ -171,7 +171,7 @@ export const translations: Record<Lang, Translation> = {
       badge: 'Technical Product Owner · Zurich · PMP',
       h1: 'Je transforme des flux de données complexes en systèmes évolutifs.',
       tagline: [
-        'Je suis Teo. Depuis cinq ans, je dirige des projets techniques pour des marques de l\'automobile, de l\'outdoor, de la logistique retail et de la mode – actuellement comme Technical Product Owner et ERP Operations & Systems Owner chez BLACKROLL.',
+        'Je suis Teo. Depuis cinq ans, je dirige des projets techniques pour des marques de l\'automobile, de l\'outdoor, de la logistique retail et de la mode – actuellement comme Technical Product Owner: ERP Operations & Systems chez BLACKROLL.',
         'Mon travail se situe là où les processus métier rencontrent les données : j\'automatise ce qui ralentit les équipes, je structure les données pour que les systèmes communiquent, et je construis des processus qui passent à l\'échelle dans la région DACH.',
       ],
       cta: 'Me contacter',
@@ -192,7 +192,7 @@ export const translations: Record<Lang, Translation> = {
     experience: {
       heading: 'Expérience',
       items: [
-        { role: 'Technical Product Owner: ERP Operations & Systems Owner', company: 'BLACKROLL AG', period: 'Janvier 2025 – Présent · Remote', bullets: ['Déploiement des commandes EDI et de l\'automatisation B2B sur plus de 2 500 points de vente en Allemagne et en Autriche.', 'Hausse de 30 % du chiffre d\'affaires B2B grâce à des intégrations évolutives et des processus allégés.', 'Gestion des retours entièrement automatisée – effort manuel du service client réduit à zéro.', 'Mise en place de documentation d\'intégration, de release trains et de processus d\'équipe qui fluidifient les transmissions.'] },
+        { role: 'Technical Product Owner: ERP Operations & Systems', company: 'BLACKROLL AG', period: 'Janvier 2025 – Présent · Remote', bullets: ['Déploiement des commandes EDI et de l\'automatisation B2B sur plus de 2 500 points de vente en Allemagne et en Autriche.', 'Hausse de 30 % du chiffre d\'affaires B2B grâce à des intégrations évolutives et des processus allégés.', 'Gestion des retours entièrement automatisée – effort manuel du service client réduit à zéro.', 'Mise en place de documentation d\'intégration, de release trains et de processus d\'équipe qui fluidifient les transmissions.'] },
         { role: 'Chef de projet IT', company: 'FIREGROUP', period: 'Mai 2022 – Juin 2024 · Hybride', bullets: ['Relaunchs digitaux et configurateurs produits livrés pour des marques de l\'automobile, de l\'outdoor et du mobilier.', 'Direction d\'équipes de cinq spécialistes avec des budgets jusqu\'à six chiffres.', 'Priorité aux workflows clients, à la qualité d\'intégration et à la rentabilité des projets.'] },
         { role: 'Chef de projet', company: 'Onebyte AG', period: 'Août 2021 – Mai 2022 · Sur site', bullets: ['Responsable de bout en bout de projets web avec des budgets jusqu\'à cinq chiffres.', 'Solutions multilingues (i18n) livrées pour une grande chaîne suisse de fitness.', 'Coordination de développeurs frontend, full-stack et backend.'] },
         { role: 'Chef de projet junior & Développeur web', company: 'Netmaster (Schweiz) AG', period: 'Août 2020 – Juillet 2021 · Sur site', bullets: ['Soutien à l\'exploitation web, à l\'hébergement et au support technique client.', 'Plusieurs environnements clients maintenus en ligne et performants.'] },
@@ -236,7 +236,7 @@ export const translations: Record<Lang, Translation> = {
       badge: 'Technical Product Owner · Zurigo · PMP',
       h1: 'Trasformo flussi di dati complessi in sistemi che scalano.',
       tagline: [
-        'Sono Teo. Da cinque anni guido progetti tecnici per brand dell\'automotive, dell\'outdoor, della logistica retail e della moda – attualmente come Technical Product Owner ed ERP Operations & Systems Owner in BLACKROLL.',
+        'Sono Teo. Da cinque anni guido progetti tecnici per brand dell\'automotive, dell\'outdoor, della logistica retail e della moda – attualmente come Technical Product Owner: ERP Operations & Systems in BLACKROLL.',
         'Il mio lavoro sta dove i processi aziendali incontrano i dati: automatizzo ciò che rallenta i team, strutturo i dati affinché i sistemi comunichino tra loro e costruisco processi che scalano nella regione DACH.',
       ],
       cta: 'Contattami',
@@ -257,7 +257,7 @@ export const translations: Record<Lang, Translation> = {
     experience: {
       heading: 'Esperienza',
       items: [
-        { role: 'Technical Product Owner: ERP Operations & Systems Owner', company: 'BLACKROLL AG', period: 'Gennaio 2025 – Presente · Remoto', bullets: ['Introdotti ordini EDI e automazione B2B in oltre 2.500 punti vendita in Germania e Austria.', 'Fatturato B2B aumentato del 30% grazie a integrazioni scalabili e processi più snelli.', 'Gestione dei resi completamente automatizzata – lavoro manuale del customer service azzerato.', 'Introdotti documentazione di integrazione, release train e processi di team che riducono gli attriti nei passaggi di consegna.'] },
+        { role: 'Technical Product Owner: ERP Operations & Systems', company: 'BLACKROLL AG', period: 'Gennaio 2025 – Presente · Remoto', bullets: ['Introdotti ordini EDI e automazione B2B in oltre 2.500 punti vendita in Germania e Austria.', 'Fatturato B2B aumentato del 30% grazie a integrazioni scalabili e processi più snelli.', 'Gestione dei resi completamente automatizzata – lavoro manuale del customer service azzerato.', 'Introdotti documentazione di integrazione, release train e processi di team che riducono gli attriti nei passaggi di consegna.'] },
         { role: 'IT Project Manager', company: 'FIREGROUP', period: 'Maggio 2022 – Giugno 2024 · Ibrido', bullets: ['Realizzati relaunch digitali e configuratori di prodotto per brand automotive, outdoor e d\'arredamento.', 'Guidati team di cinque specialisti con budget fino a sei cifre.', 'Focus su workflow dei clienti, qualità dell\'integrazione e redditività dei progetti.'] },
         { role: 'Project Manager', company: 'Onebyte AG', period: 'Agosto 2021 – Maggio 2022 · In sede', bullets: ['Responsabile end-to-end di progetti web con budget fino a cinque cifre.', 'Realizzate soluzioni multilingue (i18n) per una grande catena svizzera di palestre.', 'Coordinati sviluppatori frontend, full-stack e backend.'] },
         { role: 'Junior Project Manager & Web Developer', company: 'Netmaster (Schweiz) AG', period: 'Agosto 2020 – Luglio 2021 · In sede', bullets: ['Supporto alle operazioni web, all\'hosting e all\'assistenza tecnica ai clienti.', 'Mantenuti online e performanti diversi ambienti dei clienti.'] },
@@ -301,7 +301,7 @@ export const translations: Record<Lang, Translation> = {
       badge: 'Technical Product Owner · チューリッヒ · PMP',
       h1: '複雑なデータフローを、スケールするシステムへ。',
       tagline: [
-        'テオです。5年間、自動車・アウトドア・リテール物流・ファッションのブランドで技術プロジェクトを率いてきました。現在はBLACKROLLでテクニカルプロダクトオーナー（ERPオペレーション＆システムオーナー）を務めています。',
+        'テオです。5年間、自動車・アウトドア・リテール物流・ファッションのブランドで技術プロジェクトを率いてきました。現在はBLACKROLLでテクニカルプロダクトオーナー（ERPオペレーション＆システム）を務めています。',
         'ビジネスプロセスとデータが交わる領域が私の仕事です。チームの足かせになる作業を自動化し、システム同士がつながるようデータを構造化し、DACH地域全体でスケールするプロセスを構築します。',
       ],
       cta: 'お問い合わせ',
@@ -322,7 +322,7 @@ export const translations: Record<Lang, Translation> = {
     experience: {
       heading: '職歴',
       items: [
-        { role: 'Technical Product Owner: ERP Operations & Systems Owner', company: 'BLACKROLL AG', period: '2025年1月 – 現在 · リモート', bullets: ['ドイツ・オーストリアの2,500以上の小売拠点にEDI受注とB2B自動化を導入。', 'スケーラブルな統合とプロセスのスリム化でB2B売上を30%向上。', '返品処理を完全自動化し、カスタマーサービスの手作業をゼロに。', '統合ドキュメント、リリーストレイン、チームプロセスを導入し、引き継ぎの摩擦を削減。'] },
+        { role: 'Technical Product Owner: ERP Operations & Systems', company: 'BLACKROLL AG', period: '2025年1月 – 現在 · リモート', bullets: ['ドイツ・オーストリアの2,500以上の小売拠点にEDI受注とB2B自動化を導入。', 'スケーラブルな統合とプロセスのスリム化でB2B売上を30%向上。', '返品処理を完全自動化し、カスタマーサービスの手作業をゼロに。', '統合ドキュメント、リリーストレイン、チームプロセスを導入し、引き継ぎの摩擦を削減。'] },
         { role: 'ITプロジェクトマネージャー', company: 'FIREGROUP', period: '2022年5月 – 2024年6月 · ハイブリッド', bullets: ['自動車・アウトドア・家具ブランド向けにデジタルリニューアルと製品コンフィギュレーターを提供。', '5名のスペシャリストのチームと6桁規模の予算を管理。', '顧客ワークフロー、統合品質、プロジェクト収益性を重視。'] },
         { role: 'プロジェクトマネージャー', company: 'Onebyte AG', period: '2021年8月 – 2022年5月 · オンサイト', bullets: ['5桁規模の予算のウェブプロジェクトをエンドツーエンドで担当。', 'スイスの大手フィットネスチェーン向けに多言語（i18n）ソリューションを提供。', 'フロントエンド、フルスタック、バックエンドの開発者を調整。'] },
         { role: 'ジュニアプロジェクトマネージャー & ウェブデベロッパー', company: 'Netmaster (Schweiz) AG', period: '2020年8月 – 2021年7月 · オンサイト', bullets: ['ウェブ運用、ホスティング、顧客向け技術サポートを支援。', '複数の顧客環境の稼働とパフォーマンスを維持。'] },
@@ -366,7 +366,7 @@ export const translations: Record<Lang, Translation> = {
       badge: 'Technical Product Owner · 취리히 · PMP',
       h1: '복잡한 데이터플로우를 확장 가능한 시스템으로.',
       tagline: [
-        '테오입니다. 5년간 자동차, 아웃도어, 리테일 물류, 패션 브랜드의 기술 프로젝트를 이끌어 왔으며, 현재 BLACKROLL에서 테크니컬 프로덕트 오너(ERP 운영 & 시스템 오너)로 일하고 있습니다.',
+        '테오입니다. 5년간 자동차, 아웃도어, 리테일 물류, 패션 브랜드의 기술 프로젝트를 이끌어 왔으며, 현재 BLACKROLL에서 테크니컬 프로덕트 오너(ERP 운영 & 시스템)로 일하고 있습니다.',
         '제 일은 비즈니스 프로세스와 데이터가 만나는 곳에 있습니다. 팀의 속도를 늦추는 일을 자동화하고, 시스템이 서로 연결되도록 데이터를 구조화하며, DACH 지역 전반으로 확장되는 프로세스를 만듭니다.',
       ],
       cta: '연락하기',
@@ -387,7 +387,7 @@ export const translations: Record<Lang, Translation> = {
     experience: {
       heading: '경력',
       items: [
-        { role: 'Technical Product Owner: ERP Operations & Systems Owner', company: 'BLACKROLL AG', period: '2025년 1월 – 현재 · 원격', bullets: ['독일·오스트리아 2,500개 이상 리테일 매장에 EDI 주문과 B2B 자동화 도입.', '확장 가능한 통합과 간소화된 프로세스로 B2B 매출 30% 성장.', '반품 처리를 완전 자동화해 고객 서비스 수작업을 0으로.', '통합 문서, 릴리스 트레인, 팀 프로세스를 도입해 인수인계 마찰 감소.'] },
+        { role: 'Technical Product Owner: ERP Operations & Systems', company: 'BLACKROLL AG', period: '2025년 1월 – 현재 · 원격', bullets: ['독일·오스트리아 2,500개 이상 리테일 매장에 EDI 주문과 B2B 자동화 도입.', '확장 가능한 통합과 간소화된 프로세스로 B2B 매출 30% 성장.', '반품 처리를 완전 자동화해 고객 서비스 수작업을 0으로.', '통합 문서, 릴리스 트레인, 팀 프로세스를 도입해 인수인계 마찰 감소.'] },
         { role: 'IT 프로젝트 매니저', company: 'FIREGROUP', period: '2022년 5월 – 2024년 6월 · 하이브리드', bullets: ['자동차·아웃도어·가구 브랜드의 디지털 리뉴얼과 제품 컨피규레이터 구축.', '5명의 전문가 팀과 최대 6자리 규모 예산 관리.', '고객 워크플로우, 통합 품질, 프로젝트 수익성에 집중.'] },
         { role: '프로젝트 매니저', company: 'Onebyte AG', period: '2021년 8월 – 2022년 5월 · 현장', bullets: ['최대 5자리 규모 예산의 웹 프로젝트를 엔드투엔드로 책임.', '스위스 대형 피트니스 체인을 위한 다국어(i18n) 솔루션 구축.', '프론트엔드, 풀스택, 백엔드 개발자 조율.'] },
         { role: '주니어 프로젝트 매니저 & 웹 개발자', company: 'Netmaster (Schweiz) AG', period: '2020년 8월 – 2021년 7월 · 현장', bullets: ['웹 운영, 호스팅, 고객 기술 지원 업무 지원.', '여러 고객 환경의 가동 시간과 성능 유지.'] },
@@ -431,7 +431,7 @@ export const translations: Record<Lang, Translation> = {
       badge: 'Technical Product Owner · Zürih · PMP',
       h1: 'Karmaşık veri akışlarını ölçeklenen sistemlere dönüştürüyorum.',
       tagline: [
-        'Ben Teo. Beş yıldır otomotiv, outdoor, perakende lojistiği ve moda markaları için teknik projeler yönetiyorum – şu anda BLACKROLL\'da Technical Product Owner ve ERP Operations & Systems Owner olarak.',
+        'Ben Teo. Beş yıldır otomotiv, outdoor, perakende lojistiği ve moda markaları için teknik projeler yönetiyorum – şu anda BLACKROLL\'da Technical Product Owner: ERP Operations & Systems olarak.',
         'İşim, iş süreçlerinin veriyle buluştuğu yerde: Ekipleri yavaşlatan işleri otomatikleştiriyor, sistemlerin birbiriyle konuşabilmesi için veriyi yapılandırıyor ve DACH bölgesinde ölçeklenen süreçler kuruyorum.',
       ],
       cta: 'İletişime geç',
@@ -452,7 +452,7 @@ export const translations: Record<Lang, Translation> = {
     experience: {
       heading: 'Deneyim',
       items: [
-        { role: 'Technical Product Owner: ERP Operations & Systems Owner', company: 'BLACKROLL AG', period: 'Ocak 2025 – Devam Ediyor · Uzaktan', bullets: ['Almanya ve Avusturya\'daki 2.500\'den fazla perakende noktasına EDI siparişleri ve B2B otomasyonu getirdim.', 'Ölçeklenebilir entegrasyonlar ve sadeleşmiş süreçlerle B2B gelirini %30 artırdım.', 'İade süreçlerini tamamen otomatikleştirdim – müşteri hizmetlerindeki manuel iş sıfıra indi.', 'Entegrasyon dokümantasyonu, release train\'ler ve ekip süreçleri kurarak devir teslimlerdeki sürtünmeyi azalttım.'] },
+        { role: 'Technical Product Owner: ERP Operations & Systems', company: 'BLACKROLL AG', period: 'Ocak 2025 – Devam Ediyor · Uzaktan', bullets: ['Almanya ve Avusturya\'daki 2.500\'den fazla perakende noktasına EDI siparişleri ve B2B otomasyonu getirdim.', 'Ölçeklenebilir entegrasyonlar ve sadeleşmiş süreçlerle B2B gelirini %30 artırdım.', 'İade süreçlerini tamamen otomatikleştirdim – müşteri hizmetlerindeki manuel iş sıfıra indi.', 'Entegrasyon dokümantasyonu, release train\'ler ve ekip süreçleri kurarak devir teslimlerdeki sürtünmeyi azalttım.'] },
         { role: 'BT Proje Müdürü', company: 'FIREGROUP', period: 'Mayıs 2022 – Haziran 2024 · Hibrit', bullets: ['Otomotiv, outdoor ve mobilya markaları için dijital yenilemeler ve ürün yapılandırıcıları hayata geçirdim.', 'Beş uzmandan oluşan ekipleri ve altı haneli bütçeleri yönettim.', 'Müşteri iş akışlarına, entegrasyon kalitesine ve proje kârlılığına odaklandım.'] },
         { role: 'Proje Müdürü', company: 'Onebyte AG', period: 'Ağustos 2021 – Mayıs 2022 · Yerinde', bullets: ['Beş haneli bütçeye kadar web projelerinin uçtan uca sorumluluğunu üstlendim.', 'Büyük bir İsviçre spor salonu zinciri için çok dilli (i18n) çözümler geliştirdim.', 'Frontend, full-stack ve backend geliştiricilerini koordine ettim.'] },
         { role: 'Junior Proje Müdürü & Web Geliştirici', company: 'Netmaster (Schweiz) AG', period: 'Ağustos 2020 – Temmuz 2021 · Yerinde', bullets: ['Web operasyonlarına, barındırmaya ve teknik müşteri desteğine katkı verdim.', 'Birden fazla müşteri ortamını çevrimiçi ve hızlı tuttum.'] },
