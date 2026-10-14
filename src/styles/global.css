@@ -42,10 +42,10 @@
   --orange: #ff6a3d;
   --accent-grad: linear-gradient(90deg, #ff3b47, #ff8a3d);
 
-  --backdrop: linear-gradient(135deg, #e10a1e 0%, #8a0614 28%, #2a0207 55%, #050001 80%, #000 100%);
-  --stripe: rgba(0, 0, 0, 0.9);
-  --stripe-opacity: 0.18;
-  --glow: rgba(0, 200, 255, 0.2);
+  --backdrop: #0e0e0e;
+  --stripe: transparent;
+  --stripe-opacity: 0;
+  --glow: transparent;
 
   --panel: #000;
   --panel-glass: rgba(0, 0, 0, 0.72);
@@ -84,15 +84,15 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --backdrop: linear-gradient(135deg, #ff4a2e 0%, #ff9a6e 24%, #f8d9c8 48%, #f3eee9 72%, #ece8e4 100%);
-  --stripe: rgba(255, 255, 255, 0.9);
-  --stripe-opacity: 0.35;
-  --glow: rgba(0, 170, 230, 0.14);
+  --backdrop: #ebe9e6;
+  --stripe: transparent;
+  --stripe-opacity: 0;
+  --glow: transparent;
 
   --panel: #fafaf8;
   --panel-glass: rgba(250, 250, 248, 0.78);
   --panel-edge: rgba(0, 0, 0, 0.06);
-  --panel-shadow: 0 40px 120px rgba(120, 40, 20, 0.18);
+  --panel-shadow: 0 30px 90px rgba(0, 0, 0, 0.08);
 
   --text: #0a0a0a;
   --muted: #555;
@@ -127,14 +127,14 @@
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     color-scheme: light;
-    --backdrop: linear-gradient(135deg, #ff4a2e 0%, #ff9a6e 24%, #f8d9c8 48%, #f3eee9 72%, #ece8e4 100%);
-    --stripe: rgba(255, 255, 255, 0.9);
-    --stripe-opacity: 0.35;
-    --glow: rgba(0, 170, 230, 0.14);
+    --backdrop: #ebe9e6;
+    --stripe: transparent;
+    --stripe-opacity: 0;
+    --glow: transparent;
     --panel: #fafaf8;
     --panel-glass: rgba(250, 250, 248, 0.78);
     --panel-edge: rgba(0, 0, 0, 0.06);
-    --panel-shadow: 0 40px 120px rgba(120, 40, 20, 0.18);
+    --panel-shadow: 0 30px 90px rgba(0, 0, 0, 0.08);
     --text: #0a0a0a;
     --muted: #555;
     --muted-2: #6b6b6b;
