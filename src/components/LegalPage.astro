@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  lang: 'en' | 'de';
+  title: string;
+  description: string;
+  path: string;
+  alternatePath: string;
+  updated: string;
+}
+
+const { lang, title, description, path, alternatePath, updated } = Astro.props;
+const t = translations[lang];
+const siteUrl = 'https://teolam.com';
+const home = lang === 'de' ? '/de/' : '/';
+const legal = lang === 'de'
+  ? { privacy: '/de/datenschutz/', imprint: '/de/impressum/' }
+  : { privacy: '/privacy/', imprint: '/imprint/' };
+const back = lang === 'de' ? '← Zurück zur Startseite' : '← Back to home';
+const updatedLabel = lang === 'de' ? 'Stand' : 'Last updated';
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} · Teoman Lam</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ebe9e6" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+    <script is:inline src="/theme.js"></script>
+    <link rel="canonical" href={`${siteUrl}${path}`} />
+    <link rel="alternate" hreflang={lang} href={`${siteUrl}${path}`} />
+    <link rel="alternate" hreflang={lang === 'de' ? 'en' : 'de'} href={`${siteUrl}${alternatePath}`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t.ui.skip}</a>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="panel">
+      <header class="site-header">
+        <a class="brand" href={home} title="Teoman Lam">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.8 7.5 16.5 11.2 24 12C16.5 12.8 12.8 16.5 12 24C11.2 16.5 7.5 12.8 0 12C7.5 11.2 11.2 7.5 12 0Z" /></svg>
+          <span>Teoman Lam</span>
+        </a>
+        <div class="header-tools">
+          <a class="pill" href={alternatePath} hreflang={lang === 'de' ? 'en' : 'de'}>{lang === 'de' ? 'English' : 'Deutsch'}</a>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label={t.ui.toggleTheme} title={t.ui.toggleTheme}>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" /></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main" class="legal">
+        <a class="label legal-back" href={home}>{back}</a>
+        <h1>{title}</h1>
+        <p class="label legal-updated">{updatedLabel}: {updated}</p>
+        <div class="legal-body">
+          <slot />
+        </div>
+      </main>
+
+      <footer>
+        <p>© {new Date().getFullYear()} Teoman Lam — teolam.com</p>
+        <p class="footer-legal">
+          <a href={legal.privacy}>{t.footer.privacy}</a>
+          <a href={legal.imprint}>{t.footer.imprint}</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

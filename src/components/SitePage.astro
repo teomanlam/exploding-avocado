@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
-import 'flag-icons/css/flag-icons.min.css';
 import { type Lang, type Translation, langMeta } from '../i18n/translations';
+import heroFont from '@fontsource/inter-tight/files/inter-tight-latin-800-normal.woff2?url';
 
 interface Props {
   t: Translation;
@@ -22,37 +22,51 @@ const ogLocale: Record<Lang, string> = {
   tr: 'tr_TR',
 };
 
+const legal = lang === 'de'
+  ? { privacy: '/de/datenschutz/', imprint: '/de/impressum/' }
+  : { privacy: '/privacy/', imprint: '/imprint/' };
+const ogImage = `${siteUrl}/og-image.png`;
+
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Teoman Lam',
-  url: siteUrl,
-  jobTitle: 'IT Project Manager',
-  description: t.meta.description,
-  sameAs: ['https://www.linkedin.com/in/teomanlam'],
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'CH',
-    addressRegion: 'Zurich',
-  },
-  knowsLanguage: ['de', 'de-CH', 'en', 'tr', 'ko'],
-  knowsAbout: [
-    'Dataflows', 'Data Architecture', 'Process Automation',
-    'Technical Project Management', 'EDI', 'B2B Integration', 'DACH',
-  ],
-  alumniOf: {
-    '@type': 'EducationalOrganization',
-    name: 'ZHAW Zurich University of Applied Sciences',
-    url: 'https://www.zhaw.ch',
-  },
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    name: 'Project Management Professional (PMP)',
-    credentialCategory: 'Certification',
-    recognizedBy: {
-      '@type': 'Organization',
-      name: 'Project Management Institute (PMI)',
-      url: 'https://www.pmi.org',
+  '@type': 'ProfilePage',
+  url: canonicalUrl,
+  inLanguage: lang,
+  dateModified: new Date().toISOString().slice(0, 10),
+  mainEntity: {
+    '@type': 'Person',
+    '@id': `${siteUrl}/#person`,
+    name: 'Teoman Lam',
+    alternateName: 'Teo',
+    url: `${siteUrl}/`,
+    jobTitle: 'Technical Product Owner',
+    description: t.meta.description,
+    worksFor: { '@type': 'Organization', name: 'BLACKROLL AG', url: 'https://www.blackroll.com' },
+    sameAs: ['https://www.linkedin.com/in/teomanlam'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Zurich',
+      addressCountry: 'CH',
+    },
+    knowsLanguage: ['de', 'de-CH', 'en', 'tr', 'ko'],
+    knowsAbout: [
+      'Technical Product Ownership', 'Dataflows', 'Data Architecture', 'Process Automation',
+      'Technical Project Management', 'ERP', 'EDI', 'B2B Integration', 'DACH',
+    ],
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'ZHAW Zurich University of Applied Sciences',
+      url: 'https://www.zhaw.ch',
+    },
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Project Management Professional (PMP)',
+      credentialCategory: 'Certification',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'Project Management Institute (PMI)',
+        url: 'https://www.pmi.org',
+      },
     },
   },
 };
@@ -70,7 +84,6 @@ const [featured, ...pastRoles] = t.experience.items;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none';" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>{t.meta.title}</title>
     <meta name="description" content={t.meta.description} />
@@ -86,6 +99,7 @@ const [featured, ...pastRoles] = t.experience.items;
     <meta name="geo.placename" content="Zurich, Switzerland" />
     <meta name="geo.position" content="47.3769;8.5417" />
     <meta name="ICBM" content="47.3769, 8.5417" />
+    <link rel="preload" href={heroFont} as="font" type="font/woff2" crossorigin />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
     <link rel="alternate" hreflang="de" href={`${siteUrl}/de/`} />
@@ -96,31 +110,32 @@ const [featured, ...pastRoles] = t.experience.items;
     <link rel="alternate" hreflang="tr" href={`${siteUrl}/tr/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={t.meta.title} />
     <meta property="og:description" content={t.meta.description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Teoman Lam" />
-    <meta property="og:image" content={`${siteUrl}/apple-touch-icon.png`} />
-    <meta property="og:image:width" content="180" />
-    <meta property="og:image:height" content="180" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="Teoman Lam" />
     <meta property="og:locale" content={ogLocale[lang]} />
     {Object.entries(ogLocale).filter(([l]) => l !== lang).map(([_, locale]) => (
       <meta property="og:locale:alternate" content={locale} />
     ))}
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={t.meta.title} />
     <meta name="twitter:description" content={t.meta.description} />
-    <meta name="twitter:image" content={`${siteUrl}/apple-touch-icon.png`} />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content="Teoman Lam" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <div class="backdrop" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">{t.ui.skip}</a>
     <div class="panel">
       <header class="site-header">
         <a class="brand" href={langMeta[lang].path} title="Teoman Lam">
@@ -139,16 +154,16 @@ const [featured, ...pastRoles] = t.experience.items;
           <div class="lang-switcher">
             {Object.entries(langMeta).map(([code, meta]) => (
               <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name} title={meta.name}>
-                <span class={`fi fi-${meta.flag}`}></span>
+                <img class="flag" src={`/flags/${meta.flag}.svg`} width="20" height="15" alt="" />
               </a>
             ))}
           </div>
-          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle light and dark mode" title="Light / Dark">
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label={t.ui.toggleTheme} title={t.ui.toggleTheme}>
             <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" /></svg>
             <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" /></svg>
           </button>
           <details class="mobile-menu">
-            <summary>Menu</summary>
+            <summary>{t.ui.menu}</summary>
             <nav aria-label="Sections">
               <a href="#education">{t.nav.education}</a>
               <a href="#experience">{t.nav.experience}</a>
@@ -161,6 +176,7 @@ const [featured, ...pastRoles] = t.experience.items;
         </div>
       </header>
 
+      <main id="main">
       <section class="hero">
         <div class="hero-deco" aria-hidden="true">
           <div class="dots hero-dots"></div>
@@ -303,7 +319,7 @@ const [featured, ...pastRoles] = t.experience.items;
           <div class="card pill-cloud">
             {t.languages.items.map((item, i) => (
               <span class:list={['pill', { 'pill-fill': i < 2 }]}>
-                {languageFlags[i] && <span class={`fi fi-${languageFlags[i]}`} aria-hidden="true"></span>}
+                {languageFlags[i] && <img class="flag" src={`/flags/${languageFlags[i]}.svg`} width="16" height="12" alt="" />}
                 {item}
               </span>
             ))}
@@ -351,20 +367,25 @@ const [featured, ...pastRoles] = t.experience.items;
         <p>{t.contact.body}</p>
         <a class="cta cta-light" href="https://www.linkedin.com/in/teomanlam?originalSubdomain=ch" target="_blank" rel="noopener" title={t.contact.cta}>{t.contact.cta}</a>
       </section>
+      </main>
 
       <footer>
         <p>© {new Date().getFullYear()} Teoman Lam — teolam.com</p>
         <p class="footer-meta">
           <span class="version">v1.1.0</span>
           <span class="divider">·</span>
-          <span class="made-in">{t.footer.madeIn} <span class="fi fi-ch" aria-label="Swiss flag" role="img"></span></span>
+          <span class="made-in">{t.footer.madeIn} <img class="flag flag-square" src="/flags/ch.svg" width="12" height="12" alt="Swiss flag" /></span>
           <span class="divider">·</span>
           <span lang="ko">서울</span> — Zürich
+        </p>
+        <p class="footer-legal">
+          <a href={legal.privacy}>{t.footer.privacy}</a>
+          <a href={legal.imprint}>{t.footer.imprint}</a>
         </p>
         <div class="footer-lang">
           {Object.entries(langMeta).map(([code, meta]) => (
             <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name} title={meta.name}>
-              <span class={`fi fi-${meta.flag}`}></span>
+              <img class="flag" src={`/flags/${meta.flag}.svg`} width="20" height="15" alt="" />
             </a>
           ))}
         </div>

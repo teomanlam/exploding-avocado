@@ -24,14 +24,15 @@ export interface Translation {
   freetime: { heading: string; items: string[] };
   languages: { heading: string; items: string[] };
   contact: { heading: string; strong: string; body: string; cta: string };
-  footer: { madeIn: string };
+  footer: { madeIn: string; privacy: string; imprint: string };
+  ui: { menu: string; toggleTheme: string; skip: string };
 }
 
 export const translations: Record<Lang, Translation> = {
   en: {
     meta: {
-      title: 'Teoman Lam | Dataflows & Technical Delivery',
-      description: 'IT Project Manager and technical delivery lead in the DACH region. Specializing in dataflows, data structure, integration, process scaling, and B2B automation.',
+      title: 'Teoman Lam · Technical Product Owner & IT PM, Zurich',
+      description: 'PMP-certified Technical Product Owner in Zurich. 5 years leading ERP, EDI and B2B integration projects across DACH – dataflows, automation, delivery.',
     },
     nav: { education: 'Education', experience: 'Experience', skills: 'Skills', certifications: 'Certifications', others: 'Others', contact: 'Contact' },
     pills: ['Technical Leadership', 'Dataflows', 'Data Structure', 'Integration', 'Scaling'],
@@ -89,13 +90,14 @@ export const translations: Record<Lang, Translation> = {
     freetime: { heading: 'Freetime', items: ['Fitness', 'Brazilian Jiu Jitsu', 'Coding'] },
     languages: { heading: 'Languages', items: ['German — Native', 'Swiss German — Native', 'English — Negotiation safe', 'Türkçe — Conversational', 'Korean — Basic'] },
     contact: { heading: 'Contact', strong: 'Happy to chat anytime.', body: 'I am available on LinkedIn and regularly active.', cta: 'Visit LinkedIn ↗' },
-    footer: { madeIn: 'Made in Switzerland' },
+    footer: { madeIn: 'Made in Switzerland', privacy: 'Privacy', imprint: 'Imprint' },
+    ui: { menu: 'Menu', toggleTheme: 'Switch light / dark mode', skip: 'Skip to content' },
   },
 
   de: {
     meta: {
-      title: 'Teoman Lam | Datenflüsse & Technische Lieferung',
-      description: 'IT-Projektmanager und technischer Lieferleiter im DACH-Raum. Spezialisiert auf Datenflüsse, Datenstruktur, Integration, Prozessskalierung und B2B-Automatisierung.',
+      title: 'Teoman Lam · Technical Product Owner & IT-Projektleiter Zürich',
+      description: 'PMP-zertifizierter Technical Product Owner aus Zürich: 5 Jahre ERP-, EDI- und B2B-Integrationsprojekte im DACH-Raum – Datenflüsse, Automatisierung.',
     },
     nav: { education: 'Ausbildung', experience: 'Erfahrung', skills: 'Fähigkeiten', certifications: 'Zertifizierungen', others: 'Weiteres', contact: 'Kontakt' },
     pills: ['Technische Führung', 'Datenflüsse', 'Datenstruktur', 'Integration', 'Skalierung'],
@@ -153,13 +155,14 @@ export const translations: Record<Lang, Translation> = {
     freetime: { heading: 'Freizeit', items: ['Fitness', 'Brasilianisches Jiu Jitsu', 'Programmieren'] },
     languages: { heading: 'Sprachen', items: ['Deutsch — Muttersprache', 'Schweizerdeutsch — Muttersprache', 'Englisch — Verhandlungssicher', 'Türkisch — Konversationsniveau', 'Koreanisch — Grundkenntnisse'] },
     contact: { heading: 'Kontakt', strong: 'Jederzeit gesprächsbereit.', body: 'Ich bin auf LinkedIn verfügbar und regelmässig aktiv.', cta: 'LinkedIn besuchen ↗' },
-    footer: { madeIn: 'Hergestellt in der Schweiz' },
+    footer: { madeIn: 'Hergestellt in der Schweiz', privacy: 'Datenschutz', imprint: 'Impressum' },
+    ui: { menu: 'Menü', toggleTheme: 'Hell- / Dunkelmodus wechseln', skip: 'Zum Inhalt springen' },
   },
 
   fr: {
     meta: {
-      title: 'Teoman Lam | Flux de données & Livraison technique',
-      description: "Chef de projet IT et responsable de livraison technique dans la région DACH. Spécialisé dans les flux de données, la structure des données, l'intégration et l'automatisation B2B.",
+      title: 'Teoman Lam · Product Owner technique & chef de projet IT',
+      description: 'Product Owner technique certifié PMP à Zurich : 5 ans de projets ERP, EDI et intégration B2B en région DACH – flux de données, automatisation.',
     },
     nav: { education: 'Formation', experience: 'Expérience', skills: 'Compétences', certifications: 'Certifications', others: 'Autres', contact: 'Contact' },
     pills: ['Leadership technique', 'Flux de données', 'Structure des données', 'Intégration', 'Mise à l\'échelle'],
@@ -217,13 +220,14 @@ export const translations: Record<Lang, Translation> = {
     freetime: { heading: 'Temps libre', items: ['Fitness', 'Jiu Jitsu brésilien', 'Programmation'] },
     languages: { heading: 'Langues', items: ['Allemand — Langue maternelle', 'Alémanique — Langue maternelle', 'Anglais — Niveau négociation', 'Turc — Niveau conversationnel', 'Coréen — Notions de base'] },
     contact: { heading: 'Contact', strong: 'Disponible pour échanger à tout moment.', body: 'Je suis disponible sur LinkedIn et régulièrement actif.', cta: 'Visiter LinkedIn ↗' },
-    footer: { madeIn: 'Fabriqué en Suisse' },
+    footer: { madeIn: 'Fabriqué en Suisse', privacy: 'Confidentialité', imprint: 'Mentions légales' },
+    ui: { menu: 'Menu', toggleTheme: 'Basculer mode clair / sombre', skip: 'Aller au contenu' },
   },
 
   it: {
     meta: {
-      title: 'Teoman Lam | Flussi di dati & Consegna tecnica',
-      description: 'Project Manager IT e responsabile di consegna tecnica nella regione DACH. Specializzato in flussi di dati, struttura dei dati, integrazione, scalabilità e automazione B2B.',
+      title: 'Teoman Lam · Technical Product Owner & IT PM, Zurigo',
+      description: 'Technical Product Owner certificato PMP a Zurigo: 5 anni di progetti ERP, EDI e integrazione B2B nella regione DACH – flussi di dati, automazione.',
     },
     nav: { education: 'Formazione', experience: 'Esperienza', skills: 'Competenze', certifications: 'Certificazioni', others: 'Altro', contact: 'Contatto' },
     pills: ['Leadership tecnica', 'Flussi di dati', 'Struttura dei dati', 'Integrazione', 'Scalabilità'],
@@ -281,13 +285,14 @@ export const translations: Record<Lang, Translation> = {
     freetime: { heading: 'Tempo libero', items: ['Fitness', 'Brazilian Jiu Jitsu', 'Programmazione'] },
     languages: { heading: 'Lingue', items: ['Tedesco — Madrelingua', 'Svizzero tedesco — Madrelingua', 'Inglese — Livello negoziazione', 'Turco — Conversazionale', 'Coreano — Base'] },
     contact: { heading: 'Contatto', strong: 'Disponibile a chattare in qualsiasi momento.', body: 'Sono disponibile su LinkedIn e regolarmente attivo.', cta: 'Visita LinkedIn ↗' },
-    footer: { madeIn: 'Fatto in Svizzera' },
+    footer: { madeIn: 'Fatto in Svizzera', privacy: 'Privacy', imprint: 'Note legali' },
+    ui: { menu: 'Menu', toggleTheme: 'Cambia modalità chiara / scura', skip: 'Vai al contenuto' },
   },
 
   ja: {
     meta: {
-      title: 'テオマン・ラム | データフロー & テクニカルデリバリー',
-      description: 'DACHリージョンを拠点とするITプロジェクトマネージャー・テクニカルデリバリーリード。データフロー、データ構造、システム統合、プロセスのスケーリング、B2B自動化を専門とする。',
+      title: 'テオマン・ラム｜テクニカルプロダクトオーナー（チューリッヒ）',
+      description: 'チューリッヒ拠点のPMP認定テクニカルプロダクトオーナー。DACH地域でERP・EDI・B2B統合プロジェクトを5年間リード。データフローと自動化が専門。',
     },
     nav: { education: '学歴', experience: '職歴', skills: 'スキル', certifications: '資格', others: 'その他', contact: 'お問い合わせ' },
     pills: ['テクニカルリーダーシップ', 'データフロー', 'データ構造', 'インテグレーション', 'スケーリング'],
@@ -345,13 +350,14 @@ export const translations: Record<Lang, Translation> = {
     freetime: { heading: '趣味', items: ['フィットネス', 'ブラジリアン柔術', 'コーディング'] },
     languages: { heading: '言語', items: ['ドイツ語 — 母国語', 'スイスドイツ語 — 母国語', '英語 — ビジネスレベル', 'トルコ語 — 日常会話', '韓国語 — 基礎'] },
     contact: { heading: 'お問い合わせ', strong: 'いつでもお気軽にどうぞ。', body: 'LinkedInで定期的に活動しています。', cta: 'LinkedInを見る ↗' },
-    footer: { madeIn: 'スイス製' },
+    footer: { madeIn: 'スイス製', privacy: 'プライバシー', imprint: '運営者情報' },
+    ui: { menu: 'メニュー', toggleTheme: 'ライト／ダークモード切替', skip: '本文へスキップ' },
   },
 
   ko: {
     meta: {
-      title: '테오만 람 | 데이터플로우 & 기술 납품',
-      description: 'DACH 지역을 기반으로 하는 IT 프로젝트 매니저 겸 기술 납품 리드. 데이터플로우, 데이터 구조, 시스템 통합, 프로세스 확장 및 B2B 자동화 전문.',
+      title: '테오만 람 · 테크니컬 프로덕트 오너 & IT PM (취리히)',
+      description: '취리히 기반 PMP 인증 테크니컬 프로덕트 오너. DACH 지역에서 5년간 ERP·EDI·B2B 통합 프로젝트 리드. 데이터플로우와 자동화 전문.',
     },
     nav: { education: '학력', experience: '경력', skills: '스킬', certifications: '자격증', others: '기타', contact: '연락처' },
     pills: ['기술 리더십', '데이터플로우', '데이터 구조', '통합', '확장'],
@@ -409,13 +415,14 @@ export const translations: Record<Lang, Translation> = {
     freetime: { heading: '취미', items: ['피트니스', '브라질리언 주짓수', '코딩'] },
     languages: { heading: '언어', items: ['독일어 — 모국어', '스위스 독일어 — 모국어', '영어 — 비즈니스 협상 수준', '터키어 — 일상 회화', '한국어 — 기초'] },
     contact: { heading: '연락처', strong: '언제든지 연락 주세요.', body: 'LinkedIn에서 정기적으로 활동하고 있습니다.', cta: 'LinkedIn 방문 ↗' },
-    footer: { madeIn: '스위스에서 제작' },
+    footer: { madeIn: '스위스에서 제작', privacy: '개인정보', imprint: '운영자 정보' },
+    ui: { menu: '메뉴', toggleTheme: '라이트 / 다크 모드 전환', skip: '본문으로 건너뛰기' },
   },
 
   tr: {
     meta: {
-      title: 'Teoman Lam | Veri Akışları & Teknik Teslimat',
-      description: 'DACH bölgesinde faaliyet gösteren IT Proje Yöneticisi ve teknik teslimat lideri. Veri akışları, veri yapısı, entegrasyon, süreç ölçeklendirme ve B2B otomasyonu konusunda uzmanlaşmış.',
+      title: 'Teoman Lam · Teknik Ürün Sahibi & BT Proje Yöneticisi',
+      description: 'Zürih\'te PMP sertifikalı teknik ürün sahibi: DACH bölgesinde 5 yıllık ERP, EDI ve B2B entegrasyon projeleri – veri akışları ve otomasyon.',
     },
     nav: { education: 'Eğitim', experience: 'Deneyim', skills: 'Beceriler', certifications: 'Sertifikalar', others: 'Diğer', contact: 'İletişim' },
     pills: ['Teknik Liderlik', 'Veri Akışları', 'Veri Yapısı', 'Entegrasyon', 'Ölçeklendirme'],
@@ -473,6 +480,7 @@ export const translations: Record<Lang, Translation> = {
     freetime: { heading: 'Boş Zaman', items: ['Fitness', 'Brezilya Jiu Jitsu', 'Kodlama'] },
     languages: { heading: 'Diller', items: ['Almanca — Anadil', 'İsviçre Almancası — Anadil', 'İngilizce — Müzakere düzeyi', 'Türkçe — Anadil', 'Korece — Temel'] },
     contact: { heading: 'İletişim', strong: 'Her zaman sohbet etmekten mutluluk duyarım.', body: 'LinkedIn\'de düzenli olarak aktifim.', cta: 'LinkedIn\'i Ziyaret Et ↗' },
-    footer: { madeIn: 'İsviçre\'de Yapıldı' },
+    footer: { madeIn: 'İsviçre\'de Yapıldı', privacy: 'Gizlilik', imprint: 'Künye' },
+    ui: { menu: 'Menü', toggleTheme: 'Açık / koyu mod değiştir', skip: 'İçeriğe geç' },
   },
 };
