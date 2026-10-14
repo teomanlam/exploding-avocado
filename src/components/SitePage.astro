@@ -143,9 +143,9 @@ const [featured, ...pastRoles] = t.experience.items;
           <span>Teoman Lam</span>
         </a>
         <nav class="links" aria-label="Sections">
-          <a href="#education" title={t.nav.education}>{t.nav.education}</a>
           <a href="#experience" title={t.nav.experience}>{t.nav.experience}</a>
           <a href="#skills" title={t.nav.skills}>{t.nav.skills}</a>
+          <a href="#education" title={t.nav.education}>{t.nav.education}</a>
           <a href="#certifications" title={t.nav.certifications}>{t.nav.certifications}</a>
           <a href="#others" title={t.nav.others}>{t.nav.others}</a>
           <a href="#contact" class="nav-contact" title={t.nav.contact}>[ {t.nav.contact} ]</a>
@@ -165,9 +165,9 @@ const [featured, ...pastRoles] = t.experience.items;
           <details class="mobile-menu">
             <summary>{t.ui.menu}</summary>
             <nav aria-label="Sections">
-              <a href="#education">{t.nav.education}</a>
               <a href="#experience">{t.nav.experience}</a>
               <a href="#skills">{t.nav.skills}</a>
+              <a href="#education">{t.nav.education}</a>
               <a href="#certifications">{t.nav.certifications}</a>
               <a href="#others">{t.nav.others}</a>
               <a href="#contact" class="nav-contact">[ {t.nav.contact} ]</a>
@@ -227,21 +227,8 @@ const [featured, ...pastRoles] = t.experience.items;
         ))}
       </div>
 
-      <section id="education" class="section">
-        <div class="section-head"><h2>{t.education.heading}</h2><span class="section-num">[ 01 ]</span></div>
-        <div class="grid grid-2">
-          {t.education.items.map(item => (
-            <div class="card">
-              <h3>{item.school}</h3>
-              <p class="meta">{item.period}</p>
-              <span class="pill pill-fill">{item.grade}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="experience" class="section">
-        <div class="section-head"><h2>{t.experience.heading}</h2><span class="section-num">[ 02 ]</span></div>
+        <div class="section-head"><h2>{t.experience.heading}</h2><span class="section-num">[ 01 ]</span></div>
         <div class="feature">
           <div class="feature-text">
             <h3>{featured.role}</h3>
@@ -291,7 +278,7 @@ const [featured, ...pastRoles] = t.experience.items;
       </section>
 
       <section id="skills" class="section">
-        <div class="section-head"><h2>{t.skills.heading}</h2><span class="section-num">[ 03 ]</span></div>
+        <div class="section-head"><h2>{t.skills.heading}</h2><span class="section-num">[ 02 ]</span></div>
         <div class="grid grid-4">
           {t.skills.items.map(item => (
             <div class="card">
@@ -299,6 +286,19 @@ const [featured, ...pastRoles] = t.experience.items;
               <ul class="list">
                 {item.bullets.map(b => <li>{b}</li>)}
               </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-head"><h2>{t.education.heading}</h2><span class="section-num">[ 03 ]</span></div>
+        <div class="grid grid-2">
+          {t.education.items.map(item => (
+            <div class="card">
+              <h3>{item.school}</h3>
+              <p class="meta">{item.period}</p>
+              <span class="pill pill-fill">{item.grade}</span>
             </div>
           ))}
         </div>

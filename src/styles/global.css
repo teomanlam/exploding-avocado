@@ -1324,3 +1324,9 @@ footer p {
     padding: 9px 6px;
   }
 }
+
+/* Break Japanese headings at phrase boundaries instead of mid-word */
+:lang(ja) h1,
+:lang(ja) h2 {
+  word-break: auto-phrase;
+}
