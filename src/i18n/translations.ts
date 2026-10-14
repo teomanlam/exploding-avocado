@@ -48,7 +48,7 @@ export const translations: Record<Lang, Translation> = {
     },
     figures: [
       { value: '30%', label: 'more B2B revenue after automating order processing via EDI' },
-      { value: '2,500+', label: 'retail partners in DACH on one automated B2B platform' },
+      { value: '2,500+', label: 'retail locations in DACH on one automated B2B platform' },
       { value: '100%', label: 'less manual support effort for Swiss B2C returns' },
       { value: '50–60%', label: 'less overhead in development teams through clear leadership' },
     ],
@@ -113,7 +113,7 @@ export const translations: Record<Lang, Translation> = {
     },
     figures: [
       { value: '30%', label: 'mehr B2B-Umsatz durch automatisierte Bestellabwicklung via EDI' },
-      { value: '2\'500+', label: 'Handelspartner im DACH-Raum auf einer automatisierten B2B-Plattform' },
+      { value: '2\'500+', label: 'Handelsstandorte im DACH-Raum auf einer automatisierten B2B-Plattform' },
       { value: '100%', label: 'weniger manueller Supportaufwand für Schweizer B2C-Retouren' },
       { value: '50–60%', label: 'weniger Overhead in Entwicklungsteams durch klare Führung' },
     ],
@@ -178,7 +178,7 @@ export const translations: Record<Lang, Translation> = {
     },
     figures: [
       { value: '30%', label: 'de chiffre d\'affaires B2B en plus grâce aux commandes automatisées via EDI' },
-      { value: '2\'500+', label: 'partenaires retail en région DACH sur une plateforme B2B automatisée' },
+      { value: '2\'500+', label: 'points de vente en région DACH sur une plateforme B2B automatisée' },
       { value: '100%', label: 'd\'effort de support manuel en moins pour les retours B2C en Suisse' },
       { value: '50–60%', label: 'de surcharge en moins dans les équipes de développement grâce à un leadership clair' },
     ],
@@ -243,7 +243,7 @@ export const translations: Record<Lang, Translation> = {
     },
     figures: [
       { value: '30%', label: 'di fatturato B2B in più grazie agli ordini automatizzati via EDI' },
-      { value: '2\'500+', label: 'partner retail nella regione DACH su un\'unica piattaforma B2B automatizzata' },
+      { value: '2\'500+', label: 'punti vendita nella regione DACH su un\'unica piattaforma B2B automatizzata' },
       { value: '100%', label: 'di supporto manuale in meno per i resi B2C in Svizzera' },
       { value: '50–60%', label: 'di overhead in meno nei team di sviluppo grazie a una leadership chiara' },
     ],
@@ -308,7 +308,7 @@ export const translations: Record<Lang, Translation> = {
     },
     figures: [
       { value: '30%', label: 'EDIによる受注処理の自動化でB2B売上が増加' },
-      { value: '2\'500+', label: 'DACH地域の小売パートナーを一つの自動化B2Bプラットフォームに統合' },
+      { value: '2\'500+', label: 'DACH地域の小売拠点を一つの自動化B2Bプラットフォームに統合' },
       { value: '100%', label: 'スイスのB2C返品対応における手作業サポートを削減' },
       { value: '50–60%', label: '明確なリーダーシップで開発チームのオーバーヘッドを削減' },
     ],
@@ -373,7 +373,7 @@ export const translations: Record<Lang, Translation> = {
     },
     figures: [
       { value: '30%', label: 'EDI 기반 주문 자동화로 늘어난 B2B 매출' },
-      { value: '2\'500+', label: '하나의 자동화 B2B 플랫폼에 연결된 DACH 지역 리테일 파트너' },
+      { value: '2\'500+', label: '하나의 자동화 B2B 플랫폼에 연결된 DACH 지역 리테일 매장' },
       { value: '100%', label: '스위스 B2C 반품의 수작업 지원 업무 감소' },
       { value: '50–60%', label: '명확한 리더십으로 줄인 개발팀 오버헤드' },
     ],
@@ -438,7 +438,7 @@ export const translations: Record<Lang, Translation> = {
     },
     figures: [
       { value: '30%', label: 'EDI ile otomatikleşen sipariş süreçleri sayesinde daha fazla B2B gelir' },
-      { value: '2\'500+', label: 'DACH bölgesinde tek bir otomatik B2B platformundaki perakende iş ortağı' },
+      { value: '2\'500+', label: 'DACH bölgesinde tek bir otomatik B2B platformundaki perakende noktası' },
       { value: '100%', label: 'İsviçre\'deki B2C iadelerinde daha az manuel destek yükü' },
       { value: '50–60%', label: 'net liderlik sayesinde geliştirme ekiplerinde daha az ek yük' },
     ],
