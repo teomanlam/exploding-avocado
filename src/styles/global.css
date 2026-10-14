@@ -176,7 +176,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  padding: 64px;
+  padding: 0 32px;
   background: var(--panel);
   color: var(--text);
   font-family: var(--font-display);
@@ -227,11 +227,13 @@ a:focus-visible {
 
 .panel {
   position: relative;
-  max-width: 1480px;
+  max-width: 1640px;
+  min-height: 100vh;
   margin: 0 auto;
   background: var(--panel);
   border: 1px solid var(--panel-edge);
-  border-radius: 22px;
+  border-top: 0;
+  border-bottom: 0;
   box-shadow: var(--panel-shadow);
   overflow: clip;
 }
@@ -1106,7 +1108,7 @@ footer p {
 
 @media (max-width: 1180px) {
   body {
-    padding: 32px;
+    padding: 0 20px;
   }
 
   .links {
@@ -1128,12 +1130,9 @@ footer p {
   }
 
   body {
-    padding: 10px;
+    padding: 0 10px;
   }
 
-  .panel {
-    border-radius: 18px;
-  }
 
   .site-header {
     padding: 16px 20px;
