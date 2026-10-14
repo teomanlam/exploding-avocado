@@ -19,7 +19,7 @@ export interface Translation {
   education: { heading: string; items: { school: string; period: string; grade: string }[] };
   experience: { heading: string; items: { role: string; company: string; period: string; bullets: string[] }[] };
   skills: { heading: string; items: { title: string; bullets: string[] }[] };
-  certifications: { heading: string; items: { title: string; body: string }[] };
+  certifications: { heading: string; items: { title: string; date?: string; body: string }[] };
   others: { heading: string; items: { title: string; bullets: string[] }[] };
   freetime: { heading: string; items: string[] };
   languages: { heading: string; items: string[] };
@@ -79,7 +79,7 @@ export const translations: Record<Lang, Translation> = {
     },
     certifications: {
       heading: 'Certification',
-      items: [{ title: 'PMP — Project Management Professional (13 April 2026)', body: 'Globally recognized certification for structured project leadership and delivery at scale.' }],
+      items: [{ title: 'PMP — Project Management Professional', date: '13 April 2026', body: 'Globally recognized certification for structured project leadership and delivery at scale.' }],
     },
     others: {
       heading: 'Focus',
@@ -144,7 +144,7 @@ export const translations: Record<Lang, Translation> = {
     },
     certifications: {
       heading: 'Zertifizierung',
-      items: [{ title: 'PMP — Project Management Professional (13. April 2026)', body: 'International anerkannte Zertifizierung für strukturierte Projektführung und Umsetzung im grossen Massstab.' }],
+      items: [{ title: 'PMP — Project Management Professional', date: '13. April 2026', body: 'International anerkannte Zertifizierung für strukturierte Projektführung und Umsetzung im grossen Massstab.' }],
     },
     others: {
       heading: 'Fokus',
@@ -209,7 +209,7 @@ export const translations: Record<Lang, Translation> = {
     },
     certifications: {
       heading: 'Certification',
-      items: [{ title: 'PMP — Project Management Professional (13 avril 2026)', body: 'Certification reconnue mondialement en pilotage de projet structuré et livraison à grande échelle.' }],
+      items: [{ title: 'PMP — Project Management Professional', date: '13 avril 2026', body: 'Certification reconnue mondialement en pilotage de projet structuré et livraison à grande échelle.' }],
     },
     others: {
       heading: 'Focus',
@@ -274,7 +274,7 @@ export const translations: Record<Lang, Translation> = {
     },
     certifications: {
       heading: 'Certificazione',
-      items: [{ title: 'PMP — Project Management Professional (13 aprile 2026)', body: 'Certificazione riconosciuta a livello mondiale per la guida strutturata dei progetti e la delivery su larga scala.' }],
+      items: [{ title: 'PMP — Project Management Professional', date: '13 aprile 2026', body: 'Certificazione riconosciuta a livello mondiale per la guida strutturata dei progetti e la delivery su larga scala.' }],
     },
     others: {
       heading: 'Focus',
@@ -339,7 +339,7 @@ export const translations: Record<Lang, Translation> = {
     },
     certifications: {
       heading: '資格',
-      items: [{ title: 'PMP — プロジェクトマネジメント・プロフェッショナル（2026年4月13日）', body: '体系的なプロジェクトリーダーシップと大規模デリバリーに関する国際的に認められた資格。' }],
+      items: [{ title: 'PMP — プロジェクトマネジメント・プロフェッショナル', date: '2026年4月13日', body: '体系的なプロジェクトリーダーシップと大規模デリバリーに関する国際的に認められた資格。' }],
     },
     others: {
       heading: 'フォーカス',
@@ -404,7 +404,7 @@ export const translations: Record<Lang, Translation> = {
     },
     certifications: {
       heading: '자격증',
-      items: [{ title: 'PMP — 프로젝트 관리 전문가 (2026년 4월 13일)', body: '체계적인 프로젝트 리더십과 대규모 딜리버리에 대한 국제 공인 자격증.' }],
+      items: [{ title: 'PMP — 프로젝트 관리 전문가', date: '2026년 4월 13일', body: '체계적인 프로젝트 리더십과 대규모 딜리버리에 대한 국제 공인 자격증.' }],
     },
     others: {
       heading: '포커스',
@@ -469,7 +469,7 @@ export const translations: Record<Lang, Translation> = {
     },
     certifications: {
       heading: 'Sertifika',
-      items: [{ title: 'PMP — Proje Yönetimi Profesyoneli (13 Nisan 2026)', body: 'Yapılandırılmış proje liderliği ve büyük ölçekli teslimat alanında uluslararası tanınan sertifika.' }],
+      items: [{ title: 'PMP — Proje Yönetimi Profesyoneli', date: '13 Nisan 2026', body: 'Yapılandırılmış proje liderliği ve büyük ölçekli teslimat alanında uluslararası tanınan sertifika.' }],
     },
     others: {
       heading: 'Odak',

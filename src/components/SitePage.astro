@@ -310,6 +310,7 @@ const [featured, ...pastRoles] = t.experience.items;
           {t.certifications.items.map(item => (
             <div class="card">
               <h3>{item.title}</h3>
+              {item.date && <span class="pill pill-fill">{item.date}</span>}
               <p class="meta">{item.body} <a class="pmi-link" href="https://www.pmi.org/" target="_blank" rel="noopener" title="Project Management Institute">PMI</a></p>
             </div>
           ))}
