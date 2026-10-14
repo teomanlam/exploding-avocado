@@ -56,6 +56,13 @@ const jsonLd = {
     },
   },
 };
+
+// Four-point sparkle used as the brand mark and decorative accent
+const sparkle = 'M12 0C12.8 7.5 16.5 11.2 24 12C16.5 12.8 12.8 16.5 12 24C11.2 16.5 7.5 12.8 0 12C7.5 11.2 11.2 7.5 12 0Z';
+// Flags for t.languages.items, which share the same order in every locale
+const languageFlags = ['de', 'ch', 'gb', 'tr', 'kr'];
+const pad = (n: number) => String(n).padStart(2, '0');
+const [featured, ...pastRoles] = t.experience.items;
 ---
 
 <!DOCTYPE html>
@@ -70,8 +77,10 @@ const jsonLd = {
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="Teoman Lam" />
     <meta name="keywords" content="Teoman Lam, dataflows, data structure, technical leadership, process scaling, integration, DACH, Switzerland, IT project manager, technical product owner, data analytics, EDI, B2B integration" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3eee9" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+    <script is:inline src="/theme.js"></script>
     <meta name="format-detection" content="telephone=no" />
     <meta name="geo.region" content="CH" />
     <meta name="geo.placename" content="Zurich, Switzerland" />
@@ -111,72 +120,153 @@ const jsonLd = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
-    <div class="page">
-      <nav>
-        <div class="nav-lang">
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="panel">
+      <header class="site-header">
+        <a class="brand" href={langMeta[lang].path} title="Teoman Lam">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d={sparkle} /></svg>
+          <span>Teoman Lam</span>
+        </a>
+        <nav class="links" aria-label="Sections">
+          <a href="#education" title={t.nav.education}>{t.nav.education}</a>
+          <a href="#experience" title={t.nav.experience}>{t.nav.experience}</a>
+          <a href="#skills" title={t.nav.skills}>{t.nav.skills}</a>
+          <a href="#certifications" title={t.nav.certifications}>{t.nav.certifications}</a>
+          <a href="#others" title={t.nav.others}>{t.nav.others}</a>
+          <a href="#contact" class="nav-contact" title={t.nav.contact}>[ {t.nav.contact} ]</a>
+        </nav>
+        <div class="header-tools">
           <div class="lang-switcher">
             {Object.entries(langMeta).map(([code, meta]) => (
               <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name} title={meta.name}>
-                <span class={`fi fi-${meta.flag} fis`}></span>
+                <span class={`fi fi-${meta.flag}`}></span>
               </a>
             ))}
           </div>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle light and dark mode" title="Light / Dark">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" /></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" /></svg>
+          </button>
+          <details class="mobile-menu">
+            <summary>Menu</summary>
+            <nav aria-label="Sections">
+              <a href="#education">{t.nav.education}</a>
+              <a href="#experience">{t.nav.experience}</a>
+              <a href="#skills">{t.nav.skills}</a>
+              <a href="#certifications">{t.nav.certifications}</a>
+              <a href="#others">{t.nav.others}</a>
+              <a href="#contact" class="nav-contact">[ {t.nav.contact} ]</a>
+            </nav>
+          </details>
         </div>
-        <div class="nav-main">
-          <div class="brand">Teoman Lam</div>
-          <div class="links">
-            <a href="#education" title={t.nav.education}>{t.nav.education}</a>
-            <a href="#experience" title={t.nav.experience}>{t.nav.experience}</a>
-            <a href="#skills" title={t.nav.skills}>{t.nav.skills}</a>
-            <a href="#certifications" title={t.nav.certifications}>{t.nav.certifications}</a>
-            <a href="#others" title={t.nav.others}>{t.nav.others}</a>
-            <a href="#contact" title={t.nav.contact}>{t.nav.contact}</a>
-          </div>
-        </div>
-      </nav>
-
-      <div class="tag-row">
-        {t.pills.map(pill => <a class="tv-cat-pill" href="#skills" title={pill}>{pill}</a>)}
-      </div>
+      </header>
 
       <section class="hero">
-        <div class="badge">{t.hero.badge}</div>
+        <div class="hero-deco" aria-hidden="true">
+          <div class="dots hero-dots"></div>
+          <div class="shape ring-lg"></div>
+          <div class="shape ring-dashed"></div>
+          <div class="shape diamond-outline"></div>
+          <div class="shape diamond-fill"></div>
+          <div class="shape capsule"></div>
+          <div class="shape hline"></div>
+          <div class="shape vline"></div>
+          <svg class="cross cross-tl" viewBox="0 0 14 14"><path d="M7 0v14M0 7h14" /></svg>
+          <svg class="cross cross-tr" viewBox="0 0 14 14"><path d="M7 0v14M0 7h14" /></svg>
+          <svg class="cross cross-bl" viewBox="0 0 14 14"><path d="M7 0v14M0 7h14" /></svg>
+          <svg class="cross cross-br" viewBox="0 0 14 14"><path d="M7 0v14M0 7h14" /></svg>
+          <svg class="spark spark-a" viewBox="0 0 24 24"><path d={sparkle} /></svg>
+          <svg class="spark spark-b" viewBox="0 0 24 24"><path d={sparkle} /></svg>
+          <svg class="spark spark-c" viewBox="0 0 24 24"><path d={sparkle} /></svg>
+        </div>
+        <div class="badge"><span class="status-dot" aria-hidden="true"></span>{t.hero.badge}</div>
         <h1>{t.hero.h1}</h1>
-        {t.hero.tagline.map(para => <p class="tagline">{para}</p>)}
-        <a class="cta" href="#contact" title={t.hero.cta}>{t.hero.cta}</a>
+        <div class="tagline">
+          {t.hero.tagline.map(para => <p>{para}</p>)}
+        </div>
+        <div class="hero-actions">
+          <a class="cta" href="#contact" title={t.hero.cta}>{t.hero.cta}</a>
+          {t.pills.map(pill => <a class="pill" href="#skills" title={pill}>{pill}</a>)}
+        </div>
       </section>
 
-      <section id="figures" class="figures-short">
-        {t.figures.map(fig => (
+      <section id="figures" class="figures">
+        {t.figures.map((fig, i) => (
           <div class="figure-card">
-            <strong>{fig.value}</strong>
-            <p>{fig.label}</p>
+            <span class="pill figure-tag"><span class="dot" aria-hidden="true"></span>{pad(i + 1)}</span>
+            <div>
+              <strong>{fig.value}</strong>
+              <p>{fig.label}</p>
+            </div>
           </div>
         ))}
       </section>
 
+      <div class="keyword-band" aria-hidden="true">
+        {t.pills.map((pill, i) => (
+          <>
+            {i > 0 && <svg class="spark" viewBox="0 0 24 24"><path d={sparkle} /></svg>}
+            <span class:list={[{ outline: i % 2 === 1 }]}>{pill}</span>
+          </>
+        ))}
+      </div>
+
       <section id="education" class="section">
-        <h2>{t.education.heading}</h2>
-        <div class="cards">
+        <div class="section-head"><h2>{t.education.heading}</h2><span class="section-num">[ 01 ]</span></div>
+        <div class="grid grid-2">
           {t.education.items.map(item => (
             <div class="card">
-              <strong>{item.school}</strong>
-              <p>{item.period}</p>
-              <p>{item.grade}</p>
+              <h3>{item.school}</h3>
+              <p class="meta">{item.period}</p>
+              <span class="pill pill-fill">{item.grade}</span>
             </div>
           ))}
         </div>
       </section>
 
       <section id="experience" class="section">
-        <h2>{t.experience.heading}</h2>
-        <div class="cards">
-          {t.experience.items.map(item => (
+        <div class="section-head"><h2>{t.experience.heading}</h2><span class="section-num">[ 02 ]</span></div>
+        <div class="feature">
+          <div class="feature-text">
+            <h3>{featured.role}</h3>
+            <p class="company">{featured.company}</p>
+            <div class="pill-row">
+              {featured.period.split(' · ').reverse().map((part, i) => (
+                <span class:list={['pill', { 'pill-fill': i === 0 }]}>{part}</span>
+              ))}
+            </div>
+            <ul class="list">
+              {featured.bullets.map(b => <li>{b}</li>)}
+            </ul>
+          </div>
+          <div class="feature-art" aria-hidden="true">
+            <svg viewBox="0 0 700 520" preserveAspectRatio="xMidYMid slice">
+              <circle class="ring" cx="540" cy="150" r="60" />
+              <circle class="ring ring-2" cx="540" cy="150" r="120" />
+              <circle class="ring ring-3" cx="540" cy="150" r="190" />
+              <path class="flow" d="M40 440 C200 440 220 280 360 280 S 470 150 540 150" />
+              <path class="flow-dashed" d="M40 380 C180 380 260 420 380 400 S 560 300 680 320" />
+              <path class="flow-accent" d="M210 470 L210 360 L360 280" />
+              <circle class="node" cx="40" cy="440" r="5" />
+              <circle class="node-hollow" cx="360" cy="280" r="6" />
+              <circle class="node" cx="540" cy="150" r="8" />
+              <circle class="node-accent" cx="210" cy="360" r="4" />
+              <rect class="outline" x="600" y="400" width="44" height="44" transform="rotate(45 622 422)" />
+              <path class="outline" d="M90 90v20M80 100h20" />
+            </svg>
+          </div>
+        </div>
+        <div class="grid grid-3">
+          {pastRoles.map(item => (
             <div class="card">
-              <strong>{item.role}</strong>
-              <p><em>{item.company}</em></p>
-              <p>{item.period}</p>
-              <ul>
+              <h3>{item.role}</h3>
+              <p class="company">{item.company}</p>
+              <div class="pill-row">
+                {item.period.split(' · ').reverse().map((part, i) => (
+                  <span class:list={['pill', { 'pill-fill': i === 0 }]}>{part}</span>
+                ))}
+              </div>
+              <ul class="list">
                 {item.bullets.map(b => <li>{b}</li>)}
               </ul>
             </div>
@@ -185,12 +275,12 @@ const jsonLd = {
       </section>
 
       <section id="skills" class="section">
-        <h2>{t.skills.heading}</h2>
-        <div class="cards grid grid-2">
+        <div class="section-head"><h2>{t.skills.heading}</h2><span class="section-num">[ 03 ]</span></div>
+        <div class="grid grid-4">
           {t.skills.items.map(item => (
             <div class="card">
-              <strong>{item.title}</strong>
-              <ul>
+              <span class="pill">{item.title}</span>
+              <ul class="list">
                 {item.bullets.map(b => <li>{b}</li>)}
               </ul>
             </div>
@@ -198,57 +288,68 @@ const jsonLd = {
         </div>
       </section>
 
-      <section id="certifications" class="section">
-        <h2>{t.certifications.heading}</h2>
-        <div class="cards">
+      <div class="section grid grid-2 split">
+        <section id="certifications">
+          <div class="section-head"><h2>{t.certifications.heading}</h2><span class="section-num">[ 04 ]</span></div>
           {t.certifications.items.map(item => (
             <div class="card">
-              <strong>{item.title}</strong>
-              <p>{item.body} <a class="pmi-link" href="https://www.pmi.org/" target="_blank" rel="noopener" title="Project Management Institute">PMI</a></p>
+              <h3>{item.title}</h3>
+              <p class="meta">{item.body} <a class="pmi-link" href="https://www.pmi.org/" target="_blank" rel="noopener" title="Project Management Institute">PMI</a></p>
             </div>
           ))}
-        </div>
-      </section>
+        </section>
+        <section id="languages">
+          <div class="section-head"><h2>{t.languages.heading}</h2><span class="section-num">[ 05 ]</span></div>
+          <div class="card pill-cloud">
+            {t.languages.items.map((item, i) => (
+              <span class:list={['pill', { 'pill-fill': i < 2 }]}>
+                {languageFlags[i] && <span class={`fi fi-${languageFlags[i]}`} aria-hidden="true"></span>}
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
+      </div>
 
       <section id="others" class="section">
-        <h2>{t.others.heading}</h2>
-        <div class="cards grid grid-2">
-          {t.others.items.map(item => (
+        <div class="section-head"><h2>{t.others.heading}</h2><span class="section-num">[ 06 ]</span></div>
+        <div class="grid grid-3">
+          {t.others.items.map((item, i) => (
             <div class="card">
-              <strong>{item.title}</strong>
-              <ul>
-                {item.bullets.map(b => <li>{b}</li>)}
-              </ul>
+              <span class="label">{item.title}</span>
+              {i === 0 ? (
+                <ul class="list">
+                  {item.bullets.map(b => <li>{b}</li>)}
+                </ul>
+              ) : (
+                <div class="pill-row">
+                  {item.bullets.map(b => <span class="pill">{b}</span>)}
+                </div>
+              )}
             </div>
           ))}
+          <div id="freetime" class="card">
+            <span class="label">{t.freetime.heading} [ 07 ]</span>
+            <div class="pill-row">
+              {t.freetime.items.map(item => <span class="pill">{item}</span>)}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="freetime" class="section">
-        <h2>{t.freetime.heading}</h2>
-        <div class="card">
-          <ul>
-            {t.freetime.items.map(item => <li>{item}</li>)}
-          </ul>
+      <section id="contact" class="contact">
+        <div class="contact-deco" aria-hidden="true">
+          <div class="dots contact-dots"></div>
+          <div class="shape c-ring-1"></div>
+          <div class="shape c-ring-2"></div>
+          <div class="shape c-ring-3"></div>
+          <div class="shape c-diamond"></div>
+          <svg class="spark c-spark" viewBox="0 0 24 24"><path d={sparkle} /></svg>
         </div>
-      </section>
-
-      <section id="languages" class="section">
-        <h2>{t.languages.heading}</h2>
-        <div class="card">
-          <ul>
-            {t.languages.items.map(item => <li>{item}</li>)}
-          </ul>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <h2>{t.contact.heading}</h2>
-        <div class="card">
-          <strong>{t.contact.strong}</strong>
-          <p>{t.contact.body}</p>
-          <a class="cta" href="https://www.linkedin.com/in/teomanlam?originalSubdomain=ch" target="_blank" rel="noopener" title={t.contact.cta}>{t.contact.cta}</a>
-        </div>
+        <span class="label">[ 08 ] {t.contact.heading}</span>
+        <h2>{t.contact.strong}</h2>
+        <p>{t.contact.body}</p>
+        <a class="cta cta-light" href="https://www.linkedin.com/in/teomanlam?originalSubdomain=ch" target="_blank" rel="noopener" title={t.contact.cta}>{t.contact.cta}</a>
       </section>
 
       <footer>
@@ -256,12 +357,14 @@ const jsonLd = {
         <p class="footer-meta">
           <span class="version">v1.1.0</span>
           <span class="divider">·</span>
-          <span class="made-in">{t.footer.madeIn} <span class="swiss-flag" aria-label="Swiss flag" role="img"></span></span>
+          <span class="made-in">{t.footer.madeIn} <span class="fi fi-ch" aria-label="Swiss flag" role="img"></span></span>
+          <span class="divider">·</span>
+          <span lang="ko">서울</span> — Zürich
         </p>
         <div class="footer-lang">
           {Object.entries(langMeta).map(([code, meta]) => (
             <a href={meta.path} class:list={['lang-btn', { active: code === lang }]} aria-label={meta.name} title={meta.name}>
-              <span class={`fi fi-${meta.flag} fis`}></span>
+              <span class={`fi fi-${meta.flag}`}></span>
             </a>
           ))}
         </div>

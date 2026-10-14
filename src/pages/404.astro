@@ -12,53 +12,48 @@ import 'flag-icons/css/flag-icons.min.css';
     <meta name="robots" content="noindex" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <meta name="color-scheme" content="dark light" />
+    <script is:inline src="/theme.js"></script>
     <style>
-      body {
-        padding-top: 0;
-      }
       .not-found {
-        min-height: 100vh;
+        min-height: calc(100vh - 128px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        padding: 2rem;
+        padding: 3rem 1.5rem;
         text-align: center;
       }
       .not-found h1 {
-        font-size: clamp(4rem, 15vw, 8rem);
-        font-weight: 700;
         margin: 0;
-        letter-spacing: -0.04em;
-        line-height: 1;
+        font-size: clamp(6rem, 22vw, 14rem);
+        font-weight: 800;
+        line-height: 0.85;
+        letter-spacing: -0.06em;
       }
       .not-found p {
-        font-size: 1.1rem;
         margin: 0;
-        opacity: 0.6;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
       }
-      .not-found a {
-        display: inline-block;
-        margin-top: 0.5rem;
-        padding: 0.6rem 1.4rem;
-        border: 2px solid #000;
-        color: #000;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background 0.15s, color 0.15s;
-      }
-      .not-found a:hover {
-        background: #000;
-        color: #fff;
+      @media (max-width: 860px) {
+        .not-found { min-height: calc(100vh - 20px); }
       }
     </style>
   </head>
   <body>
-    <div class="not-found">
-      <h1>404</h1>
-      <p>This page doesn't exist.</p>
-      <a href="/">← Back home</a>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="panel">
+      <div class="not-found">
+        <span class="badge"><span class="status-dot" aria-hidden="true"></span>Error</span>
+        <h1>404</h1>
+        <p>This page doesn't exist.</p>
+        <a class="cta" href="/">← Back home</a>
+      </div>
     </div>
   </body>
 </html>
